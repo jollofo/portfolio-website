@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  body {
+    @apply bg-black text-white select-none
+  }
+}
+
+.swiper-slide {
+  background-color: #ccc;
+  opacity: 0.2;
+  transition: opacity 0.3s linear !important;
+  cursor: grab;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+  cursor: grab;
+  transform: scale(1);
+}
+
+.swiper-slide-dragging {
+  cursor: grabbing;
+  transform: scaleX(1.08);
+}
+
+main a,
+main strong {
+  color: rgb(170, 169, 169);
+}
+
+span a {
+  color: white;
+  position: relative;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+span a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+
+span a:hover::after {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.header a {
+  color: rgb(212, 212, 212) !important;
+}
+
+
+/* Width and Track Color */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle Color */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
