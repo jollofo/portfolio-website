@@ -13,8 +13,7 @@ export default function Home() {
       <header className="py-56">
         <Container>
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-light md:pr-20 lg:pr-32 md::max-w-[900px] leading-[3.5rem] mt-20">
-            Hi, I’m James - an aspiring software developer with a passion for full stack.
-            Welcome to my page.
+            Hi, I’m James - an aspiring software developer with a passion for full stack development.<br></br>Welcome to my page.
           </h1>
           <br></br>
         </Container>
@@ -32,8 +31,8 @@ export default function Home() {
               </>
             ))}
           </article>
-          <div className="text-[#D3CDD7] min-w-[300px] flex flex-col gap-4">
-            <List gap={0} title="Education —————————" content={headerRightContent.education} />
+          <div className="text-[#DC4974] min-w-[300px] flex flex-col gap-4">
+            <List gap={10} title="Education —————————" content={headerRightContent.education} />
             <List
               gap={10}
               title="Experiences ————————"
@@ -44,7 +43,7 @@ export default function Home() {
         </Container>
       </section>
       <section className="py-20">
-        <Container className="text-[#D3CDD7] !max-w-[1400px] px-4 flex flex-col gap-20 md:gap-32">
+        <Container className="text-[#DC4974] !max-w-[1400px] px-4 flex flex-col gap-20 md:gap-32">
           <h1 className="text-[#49DCB1] text-3xl md:text-5xl lg:text-7xl">Projects —</h1> 
           {works.map((work, i) => (
             <Slider key={i} title={work.title} data={work.data} />
