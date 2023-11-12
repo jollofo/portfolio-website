@@ -1,5 +1,5 @@
 import { Props } from "@/components/Slider";
-import Image1 from "../../public/images/Image1.webp";
+import Image1 from "../../public/images/image1.png";
 export const headerLeftContent = [
   "I am currently a senior at the University of Rochester and work as a Web Developer as well as an IT consultant.",
   "My passion has always been problem solving, programming is just the most fulfilling way to do that. I love bringing my solutions to life through the code that I write.",
