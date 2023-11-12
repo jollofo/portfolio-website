@@ -8,7 +8,7 @@ const Noto = Noto_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Dev Dossier: James Muguiyi",
+  title: "James's Journal",
   description: "Landing page.",
 };
 
