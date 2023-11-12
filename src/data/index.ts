@@ -1,5 +1,12 @@
 import { Props } from "@/components/Slider";
 import Image1 from "../../public/images/image1.png";
+import asl1 from "../../public/images/asl-alphabet.jpg";
+import asl2 from "../../public/images/asl-reader-1.png";
+import asl3 from "../../public/images/asl-reader-2.png";
+import hvc1 from "../../public/images/gesture-volume-control-1.png";
+import hvc2 from "../../public/images/gesture-volume-control-2.png";
+import hvc3 from "../../public/images/gesture-volume-control-3.png";
+
 export const headerLeftContent = [
   "I am currently a senior at the University of Rochester and work as a Web Developer as well as an IT consultant.",
   "My passion has always been problem solving, programming is just the most fulfilling way to do that. I love bringing my solutions to life through the code that I write.",
@@ -33,47 +40,39 @@ export const works: Props[] = [
     data: {
       media: [
         {
-          src: Image1,
+          src: asl1,
           type: "image",
         },
         {
-          src: Image1,
+          src: asl2,
           type: "image",
         },
         {
-          src: Image1,
+          src: asl3,
           type: "image",
-        },
-        {
-          src: Image1,
-          type: "image",
-        },
+        }
       ],
-      left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, MediaPipe, Numpy, CVZone</p><br /><span><a href="https://github.com/jollofo/asl-reader" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
+      left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, MediaPipe, Numpy, CVZone</p><strong>Other:</strong><br>Google\'s Teachable Machine</br><span><a href="https://github.com/jollofo/asl-reader" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
       right:
-        "<p>This project recognizes which letters, from the ASL alphabet, are being displayed on the video stream. It contains 1 folder and 2 files. The folder stores images that can be generated from the <strong>HandSignData.py</strong> file. It crops your hand out from a live video stream and saves images upon clicking the 's' key. This data is then used to power the <strong>HandSignTester.py</strong> file which recognizes which signs are being displayed by your hands and displays the result on the video stream.</p>",
+        "<p>This project recognizes which letters, from the ASL alphabet, are being displayed on the video stream. It contains 1 folder and 2 files. The folder stores images that can be generated from the <strong>HandSignData.py</strong> file. It crops your hand out from a live video stream and saves images upon clicking the 's' key. This data is then used to power the <strong>HandSignTester.py</strong> file which recognizes which signs are being displayed by your hands and displays the result on the video stream. I used Google's Teachable Machine to train the model. As of now the only letters it recognizes are A, B and C.</p>",
     },
   },
   {
-    title: "Gesture Volume Control",
+    title: "Hand Volume Control",
     data: {
       media: [
         {
-          src: Image1,
+          src: hvc1,
           type: "image",
         },
         {
-          src: Image1,
+          src: hvc2,
           type: "image",
         },
         {
-          src: Image1,
+          src: hvc3,
           type: "image",
-        },
-        {
-          src: Image1,
-          type: "image",
-        },
+        }
       ],
       left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, MediaPipe, Numpy, ComTypes</p><br /><span><a href="https://github.com/jollofo/gesture-volume-control" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
       right:

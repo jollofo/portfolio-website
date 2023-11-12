@@ -12,7 +12,7 @@
 .swiper-slide {
   background-color: #ccc;
   opacity: 0.2;
-  transition: opacity 0.3s linear !important;
+  transition: opacity 1.0s linear !important;
   cursor: grab;
 }
 
