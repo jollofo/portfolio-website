@@ -4,7 +4,6 @@ import Header from "@/components/Header";
 import List from "@/components/List";
 import Slider from "@/components/Slider";
 import { headerLeftContent, headerRightContent, works } from "@/data";
-import Image from "next/image";
 
 export default function Home() {
   return (

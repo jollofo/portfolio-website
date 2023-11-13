@@ -1,4 +1,5 @@
 import { Props } from "@/components/Slider";
+import React, { useState } from 'react';
 import Image1 from "../../public/images/image1.png";
 import asl1 from "../../public/images/asl-alphabet.jpg";
 import asl2 from "../../public/images/asl-reader-1.png";
@@ -6,12 +7,38 @@ import asl3 from "../../public/images/asl-reader-2.png";
 import hvc1 from "../../public/images/gesture-volume-control-1.png";
 import hvc2 from "../../public/images/gesture-volume-control-2.png";
 import hvc3 from "../../public/images/gesture-volume-control-3.png";
+import b1 from "../../public/images/baccarat-1.png";
+import b2 from "../../public/images/baccarat-2.png";
+import b3 from "../../public/images/baccarat-3.jpg";
+
+// const dropdown = () => {
+//   const [isOpen, setIsOpen] = useState(false);
+
+//   const toggleDropdown = () => {
+//     setIsOpen(!isOpen);
+//   };
+
+//   return (
+//     <div>
+//       <p className="text-blue-600 cursor-pointer" onClick={toggleDropdown}>
+//         University of Rochester
+//       </p>
+//       {isOpen && (
+//         <div className="mt-2 p-4 border rounded shadow-lg">
+//           {/* Your content about the University of Rochester goes here */}
+//           <p>Details about my experience at the University...</p>
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
 
 export const headerLeftContent = [
   "I am currently a senior at the University of Rochester and work as a Web Developer as well as an IT consultant.",
   "My passion has always been problem solving, programming is just the most fulfilling way to do that. I love bringing my solutions to life through the code that I write.",
   "I am also keen on psychology. I see understanding human behavior to be the quickest way to helping us solve our biggest problems.",
   "While I am currently based in Rochester, I was born and raised in Nairobi, Kenya. I enjoy video games, reading, and anything that gets me outside.",
+
 ];
 
 export const headerRightContent = {
@@ -80,29 +107,51 @@ export const works: Props[] = [
     },
   },
   {
-    title: "Face Detector - Attendance Tracker",
+    title: "Homemade Baccarat",
     data: {
       media: [
         {
-          src: Image1,
+          src: b1,
           type: "image",
         },
         {
-          src: Image1,
+          src: b2,
           type: "image",
         },
         {
-          src: Image1,
+          src: b3,
           type: "image",
-        },
-        {
-          src: Image1,
-          type: "image",
-        },
+        }
       ],
-      left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, Pickle, Numpy, Firebase</p><br /><span><a href="https://github.com/jollofo/face-detector" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
+      left: '<p><strong>Tech Stack:</strong> </br>C++</br><br /><span><a href="https://github.com/jollofo/homemade-baccarat" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
       right:
-        "<p>This project uses a live video stream to recognizeyour face and match it to the information in the database. If your data is in the database, it records your attendance. It contains 3 files: <strong>databaseManager.py</strong> holds the data that the program checks against and handles some of the firebase certificates. <strong>encoder.py</strong> encodes the image data in order to store it more efficiently. Lastly, <strong>main.py</strong> brings everything together. It contains the face tracking code and does the matching of information. If a match is found it upadtes the necessary information.</p>",
+        "<p>This is project is a simple implementation of the card game, baccarat. It was my first project in C++ and is playable within the terminal. It contains only one file, <strong>main.cpp</strong>, which holds all the code necessary to play the game as well as the rules.</p>",
     },
-  }
+  },
+  // {
+  //   title: "Face Detector - Attendance Tracker",
+  //   data: {
+  //     media: [
+  //       {
+  //         src: Image1,
+  //         type: "image",
+  //       },
+  //       {
+  //         src: Image1,
+  //         type: "image",
+  //       },
+  //       {
+  //         src: Image1,
+  //         type: "image",
+  //       },
+  //       {
+  //         src: Image1,
+  //         type: "image",
+  //       },
+  //     ],
+  //     left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, Pickle, Numpy, Firebase</p><br /><span><a href="https://github.com/jollofo/face-detector" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
+  //     right:
+  //       "<p>This project uses a live video stream to recognizeyour face and match it to the information in the database. If your data is in the database, it records your attendance. It contains 3 files: <strong>databaseManager.py</strong> holds the data that the program checks against and handles some of the firebase certificates. <strong>encoder.py</strong> encodes the image data in order to store it more efficiently. Lastly, <strong>main.py</strong> brings everything together. It contains the face tracking code and does the matching of information. If a match is found it upadtes the necessary information.</p>",
+  //   },
+  // }
 ];
