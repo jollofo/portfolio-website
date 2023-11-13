@@ -2,7 +2,7 @@ import React from "react";
 import Container from "./Container";
 import Link from "next/link";
 import { FiAtSign } from "react-icons/fi";
-import { BsLinkedin, BsTwitter, BsInstagram } from "react-icons/bs";
+import { BsLinkedin, BsTwitter, BsGithub } from "react-icons/bs";
 import useWindowSize from "@/hooks/useWindowSize";
 const Header = () => {
   const { width } = useWindowSize();
@@ -12,7 +12,7 @@ const Header = () => {
         <Link href="/">James Muguiyi</Link>
         <nav className="flex items-center gap-8">
           <Link href="https://www.github.com/jollofo">
-            {width >= 776 ? "github" : <BsTwitter className="text-3xl" />}
+            {width >= 776 ? "github" : <BsGithub className="text-3xl" />}
           </Link>
           <Link href="https://www.linkedin.com/in/james-muguiyi-838917209/">
             {width >= 776 ? "linkedin" : <BsLinkedin className="text-3xl" />}
