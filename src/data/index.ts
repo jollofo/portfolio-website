@@ -1,6 +1,4 @@
 import { Props } from "@/components/Slider";
-import React, { useState } from 'react';
-import Image1 from "../../public/images/image1.png";
 import asl1 from "../../public/images/asl-alphabet.jpg";
 import asl2 from "../../public/images/asl-reader-1.png";
 import asl3 from "../../public/images/asl-reader-2.png";
@@ -11,34 +9,31 @@ import b1 from "../../public/images/baccarat-1.png";
 import b2 from "../../public/images/baccarat-2.png";
 import b3 from "../../public/images/baccarat-3.jpg";
 
-// const dropdown = () => {
-//   const [isOpen, setIsOpen] = useState(false);
+export const uofr = {
+  Academics: ["I study Computer Science with a minor in Psychology."],
+  Work: ["I work as a Web Developer for my University's logistics web app. The app is built using React.js and Node.js. My most recent contribution was the integration of Google's Sign in and Calendar APIs.",
+  "I also work as an IT consultant at the Simon Businss School. My roles include helping students, professors and other staff and faculty solve issues relating to installations, hardware, network and classroom technologies.",
+  "Between September 2021 and December 2021 I was a Teaching Assistant for an intro to python programming class. I worked alongside 12 students to help them solve problems and clarify course material. I also aided the professor with grading of homework and tests."
+  ],
+  "Extra-curriculars": [
+    "I also serve as the Publicity Chair for the University of Rochester Christian Fellowship (URCF).",
+    "From September 2021 to December 2021, I worked"
+  ],
+};
 
-//   const toggleDropdown = () => {
-//     setIsOpen(!isOpen);
-//   };
+export const ala = {
+  ALA: ["ALA is A-levels institution focused on developing the next generation of African leaders through a 2-year program. The program consisted of Cambridge syllabus education as well as courses designed to help students improve their leadership skills."],
+  Academics: [
+    "I completed my A-levels in 2020, with 2 A-levels in Math and Economics and 2 AS-levels in English and Computer Science. ",
+  ],
+  "Extra-curriculars": ["I seved as the CEO and CFO for the Assembly and Cultural Events student-led enterprise.", "I also served as the Communications Manager for the Enza sports enterprise."],
+};
 
-//   return (
-//     <div>
-//       <p className="text-blue-600 cursor-pointer" onClick={toggleDropdown}>
-//         University of Rochester
-//       </p>
-//       {isOpen && (
-//         <div className="mt-2 p-4 border rounded shadow-lg">
-//           {/* Your content about the University of Rochester goes here */}
-//           <p>Details about my experience at the University...</p>
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
+export const lasso = {};
 
 export const headerLeftContent = [
-  "I am currently a senior at the University of Rochester and work as a Web Developer as well as an IT consultant.",
   "My passion has always been problem solving, programming is just the most fulfilling way to do that. I love bringing my solutions to life through the code that I write.",
-  "I am also keen on psychology. I see understanding human behavior to be the quickest way to helping us solve our biggest problems.",
-  "While I am currently based in Rochester, I was born and raised in Nairobi, Kenya. I enjoy video games, reading, and anything that gets me outside.",
-
+  "Python is my most used language but I have recently been working with JavaScript a lot due to my Web Developer role. I also have experience with C++ and C# as well.",
 ];
 
 export const headerRightContent = {
@@ -55,9 +50,6 @@ export const headerRightContent = {
   activities: [
     "University of Rochester Christian Fellowship<br />Co-Publicity Chair <br/> May 2022 - Present",
     "University of Rochester <br/> Teaching Assistant <br/> Sep 2021 - Dec 2021",
-  ],
-  resume: [
-    '<strong><a className="link text-[#D3CDD7]" href="" target="undefined" rel="noopener noreferrer">University of Rochester</a></strong>',
   ],
 };
 
@@ -77,11 +69,11 @@ export const works: Props[] = [
         {
           src: asl3,
           type: "image",
-        }
+        },
       ],
       left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, MediaPipe, Numpy, CVZone</p><strong>Other:</strong><br>Google\'s Teachable Machine</br><span><a href="https://github.com/jollofo/asl-reader" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
       right:
-        "<p>This project recognizes which letters, from the ASL alphabet, are being displayed on the video stream. It contains 1 folder and 2 files. The folder stores images that can be generated from the <strong>HandSignData.py</strong> file. It crops your hand out from a live video stream and saves images upon clicking the 's' key. This data is then used to power the <strong>HandSignTester.py</strong> file which recognizes which signs are being displayed by your hands and displays the result on the video stream. I used Google's Teachable Machine to train the model. As of now the only letters it recognizes are A, B and C.</p>",
+        "<p>This project recognizes which letters, from the ASL alphabet, are being displayed on the video stream. It contains 1 folder and 2 files. The folder stores images that can be generated from the <strong>HandSignData.py</strong> file. It crops your hand out from a live video stream and saves images upon clicking the 's' key. This data is then used to power the <strong>HandSignTester.py</strong> file which recognizes which signs are being displayed by your hands and displays the result on the video stream. I used Google's Teachable Machine to train the model.</p>",
     },
   },
   {
@@ -99,7 +91,7 @@ export const works: Props[] = [
         {
           src: hvc3,
           type: "image",
-        }
+        },
       ],
       left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, MediaPipe, Numpy, ComTypes</p><br /><span><a href="https://github.com/jollofo/gesture-volume-control" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
       right:
@@ -121,7 +113,7 @@ export const works: Props[] = [
         {
           src: b3,
           type: "image",
-        }
+        },
       ],
       left: '<p><strong>Tech Stack:</strong> </br>C++</br><br /><span><a href="https://github.com/jollofo/homemade-baccarat" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
       right:

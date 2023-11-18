@@ -12,7 +12,7 @@
 .swiper-slide {
   background-color: #ccc;
   opacity: 0.2;
-  transition: opacity 1.0s linear !important;
+  transition: opacity 0.7s linear !important;
   cursor: grab;
 }
 
@@ -56,10 +56,34 @@ span a:hover::after {
   transform-origin: bottom right;
 }
 
+.glow {
+  transform: translate(-50%, -50%);
+  transition: .5s;
+}
+
+.glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #49DCB1;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+.glow:hover::before {
+  transform: scale(1.1);
+}
+
+.glow:hover {
+  color: #49DCB1;
+  text-shadow: 0 0 5px #49DCB1;
+}
+
 .header a {
   color: #FFFFFF !important;
 }
-
 
 /* Width and Track Color */
 ::-webkit-scrollbar {
