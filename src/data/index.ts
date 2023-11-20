@@ -8,6 +8,9 @@ import hvc3 from "../../public/images/gesture-volume-control-3.png";
 import b1 from "../../public/images/baccarat-1.png";
 import b2 from "../../public/images/baccarat-2.png";
 import b3 from "../../public/images/baccarat-3.jpg";
+import f1 from "../../public/images/face-1.png";
+import f2 from "../../public/images/face-2.png";
+import f3 from "../../public/images/face-3.png";
 
 export const uofr = {
   Academics: ["I study Computer Science with a minor in Psychology."],
@@ -120,30 +123,26 @@ export const works: Props[] = [
         "<p>This is project is a simple implementation of the card game, baccarat. It was my first project in C++ and is playable within the terminal. It contains only one file, <strong>main.cpp</strong>, which holds all the code necessary to play the game as well as the rules.</p>",
     },
   },
-  // {
-  //   title: "Face Detector - Attendance Tracker",
-  //   data: {
-  //     media: [
-  //       {
-  //         src: Image1,
-  //         type: "image",
-  //       },
-  //       {
-  //         src: Image1,
-  //         type: "image",
-  //       },
-  //       {
-  //         src: Image1,
-  //         type: "image",
-  //       },
-  //       {
-  //         src: Image1,
-  //         type: "image",
-  //       },
-  //     ],
-  //     left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, Pickle, Numpy, Firebase</p><br /><span><a href="https://github.com/jollofo/face-detector" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
-  //     right:
-  //       "<p>This project uses a live video stream to recognizeyour face and match it to the information in the database. If your data is in the database, it records your attendance. It contains 3 files: <strong>databaseManager.py</strong> holds the data that the program checks against and handles some of the firebase certificates. <strong>encoder.py</strong> encodes the image data in order to store it more efficiently. Lastly, <strong>main.py</strong> brings everything together. It contains the face tracking code and does the matching of information. If a match is found it upadtes the necessary information.</p>",
-  //   },
-  // }
+  {
+    title: "Face Detector - Attendance Tracker",
+    data: {
+      media: [
+        {
+          src: f1,
+          type: "image",
+        },
+        {
+          src: f2,
+          type: "image",
+        },
+        {
+          src: f3,
+          type: "image",
+        }
+      ],
+      left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, Pickle, Numpy, Firebase</p><br /><span><a href="https://github.com/jollofo/face-detector" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
+      right:
+        "<p>This project uses a live video stream to recognizeyour face and match it to the information in the database. If your data is in the database, it records your attendance. It contains 3 files: <strong>databaseManager.py</strong> holds the data that the program checks against and handles some of the firebase certificates. <strong>encoder.py</strong> encodes the image data in order to store it more efficiently. Lastly, <strong>main.py</strong> brings everything together. It contains the face tracking code and does the matching of information. If a match is found it upadtes the necessary information.</p>",
+    },
+  }
 ];

@@ -26,8 +26,8 @@ export default function Home() {
         </Container>
       </header>
       <section className="py-20">
-        <Container className="flex gap-10 md:gap-20  flex-col md:flex-row font-light">
-          <article className="text-2xl md:text-4xl leading-[1.4]">
+        <Container className="flex gap-10 md:gap-20 flex-col md:flex-row font-light">
+          <article className="text-2xl md:text-4xl leading-[1.4] md::max-w[900px]">
             <p className="pb-10">
               I am currently a senior at the
               <Dropdown
