@@ -18,7 +18,7 @@ export default function Home() {
       <Header />
       <header className="py-56">
         <Container>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-light md:pr-20 lg:pr-32 md::max-w-[900px] leading-[3.5rem] mt-20">
+          <h1 className="text-3xl sm:text-2xl md:text-5xl lg:text-6xl font-light sm:pr-10 md:pr-20 lg:pr-32 md::max-w-[900px] leading-[3.5rem] mt-20">
             Hi, I’m James - an aspiring software developer with a passion for
             full stack development.<br></br>Welcome to my page.
           </h1>
@@ -47,6 +47,16 @@ export default function Home() {
               />{" "}
               in South Africa. 
             </p>
+
+            {/* <p className="pb-10">
+              I am also an intern at a start-up 
+              <Dropdown
+                title="African Leadership Academy"
+                content={ala}
+                gap={10}
+              />{" "}
+              in South Africa. 
+            </p> */}
 
             {headerLeftContent.map((p, i) => (
               <>

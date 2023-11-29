@@ -32,11 +32,13 @@ export const ala = {
   "Extra-curriculars": ["I seved as the CEO and CFO for the Assembly and Cultural Events student-led enterprise.", "I also served as the Communications Manager for the Enza sports enterprise."],
 };
 
-export const lasso = {};
+export const ag = {
+  "Acting Globally" : []
+}
 
 export const headerLeftContent = [
   "My passion has always been problem solving, programming is just the most fulfilling way to do that. I love bringing my solutions to life through the code that I write.",
-  "Python is my most used language but I have recently been working with JavaScript a lot due to my Web Developer role. I also have experience with C++ and C# as well.",
+  "Python is my preferred language but I have recently been working with JavaScript a lot due to my Web Developer role. I also have experience with C++ and C# as well.",
 ];
 
 export const headerRightContent = {
@@ -142,7 +144,7 @@ export const works: Props[] = [
       ],
       left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, Pickle, Numpy, Firebase</p><br /><span><a href="https://github.com/jollofo/face-detector" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
       right:
-        "<p>This project uses a live video stream to recognizeyour face and match it to the information in the database. If your data is in the database, it records your attendance. It contains 3 files: <strong>databaseManager.py</strong> holds the data that the program checks against and handles some of the firebase certificates. <strong>encoder.py</strong> encodes the image data in order to store it more efficiently. Lastly, <strong>main.py</strong> brings everything together. It contains the face tracking code and does the matching of information. If a match is found it upadtes the necessary information.</p>",
+        "<p>This project uses a live video stream to recognize your face and match it to the information in the database. If your data is in the database, it records your attendance. It contains 3 files: <strong>databaseManager.py</strong> holds the data that the program checks against and handles some of the firebase certificates. <strong>encoder.py</strong> encodes the image data in order to store it more efficiently. Lastly, <strong>main.py</strong> brings everything together. It contains the face tracking code and does the matching of information. If a match is found it upadtes the necessary information.</p>",
     },
   }
 ];
