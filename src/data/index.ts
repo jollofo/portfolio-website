@@ -20,7 +20,7 @@ export const uofr = {
   ],
   "Extra-curriculars": [
     "I also serve as the Publicity Chair for the University of Rochester Christian Fellowship (URCF).",
-    "From September 2021 to December 2021, I worked"
+    "From September 2021 to December 2021, I worked as a Teaching Assistant for an intro to python programming class. I worked alongside 12 students to help them solve problems and understand course material. I also aided with grading of homework and tests."
   ],
 };
 
@@ -32,8 +32,8 @@ export const ala = {
   "Extra-curriculars": ["I seved as the CEO and CFO for the Assembly and Cultural Events student-led enterprise.", "I also served as the Communications Manager for the Enza sports enterprise."],
 };
 
-export const ag = {
-  "Acting Globally" : []
+export const idTech = {
+  "ID Tech" : []
 }
 
 export const headerLeftContent = [

@@ -22,7 +22,7 @@ const Dropdown = ({ title, content, gap = 5 }: Props) => {
         {title}
       </span>
       {isDropdownVisible && (
-        <div className="bg-[#000] my-5 p-5 gap-1 dark:bg-[#000]">
+        <div className="my-5 p-5 gap-1">
           <div className="pl-2">
             <ul style={{ gap }}>
               {Object.entries(content).map(([key, values]) => (

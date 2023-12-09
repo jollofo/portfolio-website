@@ -2,10 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   body {
-    @apply bg-black text-white select-none
+    @apply bg-black text-white select-none;
+    background: url("https://www.toptal.com/designers/subtlepatterns/uploads/papyrus-dark.png")
+      repeat 0 0;
+    -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+    -moz-animation: bg-scrolling-reverse 0.92s infinite;
+    -o-animation: bg-scrolling-reverse 0.92s infinite;
+    animation: bg-scrolling-reverse 0.92s infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
   }
 }
 
@@ -29,24 +38,24 @@
 
 main a,
 main strong {
-  color: #49DCB1;
+  color: #49dcb1;
 }
 
 span a {
-  color: #49DCB1;
+  color: #49dcb1;
   position: relative;
-  color: #49DCB1;
+  color: #49dcb1;
   text-decoration: none;
 }
 
 span a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: #49DCB1;
+  background-color: #49dcb1;
   transform-origin: bottom left;
   transition: transform 0.25s ease-out;
 }
@@ -58,17 +67,17 @@ span a:hover::after {
 
 .glow {
   transform: translate(-50%, -50%);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .glow::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  background: #49DCB1;
-  transition: .5s;
-  transform: scale(.9);
+  background: #49dcb1;
+  transition: 0.5s;
+  transform: scale(0.9);
   z-index: -1;
 }
 
@@ -77,12 +86,12 @@ span a:hover::after {
 }
 
 .glow:hover {
-  color: #49DCB1;
-  text-shadow: 0 0 5px #49DCB1;
+  color: #49dcb1;
+  text-shadow: 0 0 5px #49dcb1;
 }
 
 .header a {
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 
 /* Width and Track Color */
@@ -96,11 +105,57 @@ span a:hover::after {
 
 /* Handle Color */
 ::-webkit-scrollbar-thumb {
-  background: #DC4974;
+  background: #dc4974;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #DC4974;
+  background: #dc4974;
 }
+
+/*Floating Circles*/
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+/* Main styles */

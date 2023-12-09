@@ -35,7 +35,7 @@ export default function Home() {
                 content={uofr}
                 gap={10}
               />{" "}
-              in Rochester, New York
+              in Rochester, New York.
             </p>
 
             <p className="pb-10">
@@ -47,16 +47,6 @@ export default function Home() {
               />{" "}
               in South Africa. 
             </p>
-
-            {/* <p className="pb-10">
-              I am also an intern at a start-up 
-              <Dropdown
-                title="African Leadership Academy"
-                content={ala}
-                gap={10}
-              />{" "}
-              in South Africa. 
-            </p> */}
 
             {headerLeftContent.map((p, i) => (
               <>
