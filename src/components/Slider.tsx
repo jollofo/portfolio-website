@@ -3,6 +3,7 @@ import { SwiperSlide, Swiper } from "swiper/react";
 import "swiper/css";
 import { Navigation, Autoplay, A11y, FreeMode } from "swiper/modules";
 import Image, { StaticImageData } from "next/image";
+import { truncate } from "fs";
 
 interface Media {
   type: "image" | "video";
@@ -22,7 +23,7 @@ export interface Props {
 
 const Slider = ({ title, data }: Props) => {
   return (
-    <div className="flex slider flex-col gap-10">
+    <div className="flex slider flex-col gap-10 ">
       <h2
         className="text-3xl md:text-5xl lg:text-7xl"
         dangerouslySetInnerHTML={{ __html: title }}
@@ -60,5 +61,6 @@ const Slider = ({ title, data }: Props) => {
     </div>
   );
 };
+
 
 export default Slider;

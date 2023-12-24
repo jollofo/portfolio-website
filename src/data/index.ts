@@ -19,9 +19,8 @@ export const uofr = {
   "Between September 2021 and December 2021 I was a Teaching Assistant for an intro to python programming class. I worked alongside 12 students to help them solve problems and clarify course material. I also aided the professor with grading of homework and tests."
   ],
   "Extra-curriculars": [
-    "I also serve as the Publicity Chair for the University of Rochester Christian Fellowship (URCF).",
-    "From September 2021 to December 2021, I worked as a Teaching Assistant for an intro to python programming class. I worked alongside 12 students to help them solve problems and understand course material. I also aided with grading of homework and tests."
-  ],
+    "I also serve as the Publicity Chair for the University of Rochester Christian Fellowship (URCF)."
+  ]
 };
 
 export const ala = {
@@ -36,9 +35,14 @@ export const idTech = {
   "ID Tech" : []
 }
 
+export const languages = {
+  Python : ["Python was the first programming language I learnt and has quickly become my favorite.", "Most of my data structures and algorithm knowledge is in python and most of my projects are written in it as well"],
+  "JavaScript and TypeScript" : ["JavaScript is my second most used language because I primarily use it for my web developer roles and have begun developing projects using different frameworks.", "I am still learning TypeScript and decided to build this website using it as a challenge to myself."],
+  "C++ and C#" : ["I have built a few terminal games using C++ purely out of interest in the language. I intend to scale it and use it to develop desktop applications", "I am still a beginner with C# but use it with ASP.NET for web applications"]
+}
+
 export const headerLeftContent = [
   "My passion has always been problem solving, programming is just the most fulfilling way to do that. I love bringing my solutions to life through the code that I write.",
-  "Python is my preferred language but I have recently been working with JavaScript a lot due to my Web Developer role. I also have experience with C++ and C# as well.",
 ];
 
 export const headerRightContent = {
@@ -57,6 +61,7 @@ export const headerRightContent = {
     "University of Rochester <br/> Teaching Assistant <br/> Sep 2021 - Dec 2021",
   ],
 };
+
 
 export const works: Props[] = [
   {
