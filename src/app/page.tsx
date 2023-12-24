@@ -10,6 +10,7 @@ import {
   works,
   uofr,
   ala,
+  technologies
 } from "@/data";
 
 export default function Home() {
@@ -46,6 +47,15 @@ export default function Home() {
                 gap={10}
               />{" "}
               in South Africa. 
+            </p>
+
+            <p className="pb-10">
+              Throughout these experience, I have had the privilege to learn
+              <Dropdown
+                title="various technologies."
+                content={technologies}
+                gap={10}
+              /> 
             </p>
 
             {headerLeftContent.map((p, i) => (

@@ -20,7 +20,6 @@ export const uofr = {
   ],
   "Extra-curriculars": [
     "I also serve as the Publicity Chair for the University of Rochester Christian Fellowship (URCF).",
-    "From September 2021 to December 2021, I worked as a Teaching Assistant for an intro to python programming class. I worked alongside 12 students to help them solve problems and understand course material. I also aided with grading of homework and tests."
   ],
 };
 
@@ -32,13 +31,14 @@ export const ala = {
   "Extra-curriculars": ["I seved as the CEO and CFO for the Assembly and Cultural Events student-led enterprise.", "I also served as the Communications Manager for the Enza sports enterprise."],
 };
 
-export const idTech = {
-  "ID Tech" : []
+export const technologies = {
+  Python : ["Python is the language I am most proficient in. I've had the opportunity to teach it and use it to build most of my projects"],
+  "JavaScript & TypeScript" : ["I mainly use JavaScript for my Web Developer roles.", "I recently began to learn TypeScript to challenge myself and my most recent project is this website."],
+  "C++ and C#" : ["I learnt C++ because of its popularity on Leetcode and my desire to find a quicker but still versatile OOP language", "I learnt C# in order to get a headstart with ASP.NET for a few projects I have lined up."]
 }
 
 export const headerLeftContent = [
   "My passion has always been problem solving, programming is just the most fulfilling way to do that. I love bringing my solutions to life through the code that I write.",
-  "Python is my preferred language but I have recently been working with JavaScript a lot due to my Web Developer role. I also have experience with C++ and C# as well.",
 ];
 
 export const headerRightContent = {
@@ -47,10 +47,11 @@ export const headerRightContent = {
     "University of Rochester<br />Dec 2024",
   ],
   experiences: [
-    "Simon Business School, Rochester, NY <br />IT Consultant<br />May 2021 - Present",
-    "University of Rochester, Rochester, NY <br />Web Developer<br />Oct 2022 - Present",
+    "iD Tech, Remote, <br />Online Instructor<br />Dec 2023 - Present",
     "Acting Globally, Remote <br />Web Developer<br />Sep 2023 - Present",
+    "University of Rochester, Rochester, NY <br />Web Developer<br />Oct 2022 - Present",
     "SEO Career, Remote <br />Tech Developer Intern<br />June 2022 - May 2023",
+    "Simon Business School, Rochester, NY <br />IT Consultant<br />May 2021 - Present",
   ],
   activities: [
     "University of Rochester Christian Fellowship<br />Co-Publicity Chair <br/> May 2022 - Present",
