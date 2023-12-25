@@ -119,9 +119,19 @@ span a:hover::after {
 .text {
   opacity: 0;
 }
+
 .box:hover .text{
   opacity: 1;
 }
+
+.reverse-text {
+  opacity: 1;
+}
+
+.box:hover .reverse-text {
+  opacity: 0;
+}
+
 
 @media screen and (max-width: 800px){
     body{
