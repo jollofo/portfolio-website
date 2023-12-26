@@ -12,34 +12,39 @@ import f1 from "../../public/images/face-1.png";
 import f2 from "../../public/images/face-2.png";
 import f3 from "../../public/images/face-3.png";
 
-export const uofr = {
-  Academics: ["I study Computer Science with a minor in Psychology."],
-  Work: ["I work as a Web Developer for my University's logistics web app. The app is built using React.js and Node.js. My most recent contribution was the integration of Google's Sign in and Calendar APIs.",
-  "I also work as an IT consultant at the Simon Businss School. My roles include helping students, professors and other staff and faculty solve issues relating to installations, hardware, network and classroom technologies.",
-  "Between September 2021 and December 2021 I was a Teaching Assistant for an intro to python programming class. I worked alongside 12 students to help them solve problems and clarify course material. I also aided the professor with grading of homework and tests."
+export const accordion = {
+  ALA: [
+    "ALA is A-levels institution focused on developing the next generation of African leaders through a 2-year program. The program consisted of Cambridge syllabus education as well as courses designed to help students improve their leadership skills.",
+    "I completed my A-levels in 2020, with 2 A-levels in Math and Economics and 2 AS-levels in English and Computer Science.",
+    "I seved as the CEO and CFO for the Assembly and Cultural Events student-led enterprise."
   ],
-  "Extra-curriculars": [
-    "I also serve as the Publicity Chair for the University of Rochester Christian Fellowship (URCF)."
-  ]
+  UofR: ["I study Computer Science with a minor in Psychology.",
+  "I work as a Web Developer for my University's logistics web app. The app is built using React.js and Node.js. My most recent contribution was the integration of Google's Sign in and Calendar APIs.",
+  "I also work as an IT consultant at the Simon Businss School. My roles include helping students, professors and other staff and faculty solve issues relating to installations, hardware, network and classroom technologies.",
+  "Between September 2021 and December 2021 I was a Teaching Assistant for an intro to python programming class. I worked alongside 12 students to help them solve problems and clarify course material. I also aided the professor with grading of homework and tests.",
+  "I also serve as the Publicity Chair for the University of Rochester Christian Fellowship (URCF)."
+],
 };
 
-export const ala = {
-  ALA: ["ALA is A-levels institution focused on developing the next generation of African leaders through a 2-year program. The program consisted of Cambridge syllabus education as well as courses designed to help students improve their leadership skills."],
-  Academics: [
-    "I completed my A-levels in 2020, with 2 A-levels in Math and Economics and 2 AS-levels in English and Computer Science. ",
+
+export const languages = {
+  Python: [
+    "Python was the first programming language I learnt and has quickly become my favorite.",
+    "Most of my data structures and algorithm knowledge is in python and most of my projects are written in it as well",
   ],
-  "Extra-curriculars": ["I seved as the CEO and CFO for the Assembly and Cultural Events student-led enterprise.", "I also served as the Communications Manager for the Enza sports enterprise."],
+  "JavaScript and TypeScript": [
+    "JavaScript is my second most used language because I primarily use it for my web developer roles and have begun developing projects using different frameworks.",
+    "I am still learning TypeScript and decided to build this website using it as a challenge to myself.",
+  ],
+  "C++ and C#": [
+    "I have built a few terminal games using C++ purely out of interest in the language. I intend to scale it and use it to develop desktop applications",
+    "I am still a beginner with C# but use it with ASP.NET for web applications",
+  ],
 };
 
 export const idTech = {
-  "ID Tech" : []
-}
-
-export const languages = {
-  Python : ["Python was the first programming language I learnt and has quickly become my favorite.", "Most of my data structures and algorithm knowledge is in python and most of my projects are written in it as well"],
-  "JavaScript and TypeScript" : ["JavaScript is my second most used language because I primarily use it for my web developer roles and have begun developing projects using different frameworks.", "I am still learning TypeScript and decided to build this website using it as a challenge to myself."],
-  "C++ and C#" : ["I have built a few terminal games using C++ purely out of interest in the language. I intend to scale it and use it to develop desktop applications", "I am still a beginner with C# but use it with ASP.NET for web applications"]
-}
+  "ID Tech": [],
+};
 
 export const headerLeftContent = [
   "My passion has always been problem solving, programming is just the most fulfilling way to do that. I love bringing my solutions to life through the code that I write.",
@@ -61,7 +66,6 @@ export const headerRightContent = {
     "University of Rochester <br/> Teaching Assistant <br/> Sep 2021 - Dec 2021",
   ],
 };
-
 
 export const works: Props[] = [
   {
@@ -145,11 +149,11 @@ export const works: Props[] = [
         {
           src: f3,
           type: "image",
-        }
+        },
       ],
       left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, Pickle, Numpy, Firebase</p><br /><span><a href="https://github.com/jollofo/face-detector" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
       right:
         "<p>This project uses a live video stream to recognize your face and match it to the information in the database. If your data is in the database, it records your attendance. It contains 3 files: <strong>databaseManager.py</strong> holds the data that the program checks against and handles some of the firebase certificates. <strong>encoder.py</strong> encodes the image data in order to store it more efficiently. Lastly, <strong>main.py</strong> brings everything together. It contains the face tracking code and does the matching of information. If a match is found it upadtes the necessary information.</p>",
     },
-  }
+  },
 ];

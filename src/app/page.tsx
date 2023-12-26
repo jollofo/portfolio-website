@@ -8,9 +8,8 @@ import {
   headerLeftContent,
   headerRightContent,
   works,
-  uofr,
-  ala,
   languages,
+  accordion
 } from "@/data";
 
 export default function Home() {
@@ -26,8 +25,9 @@ export default function Home() {
           <br></br>
         </Container>
       </header>
-      <Accordion content={ala}/>
+      <Accordion content={accordion}/>
       <section className="py-20">
+        
         <Container className="text-[#DC4974] !max-w-[1400px] px-4 flex flex-col gap-20 md:gap-32">
           <h1 className="text-[#49DCB1] text-3xl md:text-5xl lg:text-7xl">
             Projects —
