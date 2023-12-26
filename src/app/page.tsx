@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import List from "@/components/List";
 import Slider from "@/components/Slider";
 import Accordion from "@/components/Accordion";
+import Dropdown from "@/components/Dropdown";
 import {
   headerLeftContent,
   headerRightContent,
@@ -11,6 +12,7 @@ import {
   languages,
   accordion
 } from "@/data";
+
 
 export default function Home() {
   return (
@@ -26,6 +28,10 @@ export default function Home() {
         </Container>
       </header>
       <Accordion content={accordion}/>
+      <p>
+        Throughout my experiences, I have had the opportunity to learn
+      <Dropdown title="various technologies" content={languages}/>
+      </p>
       <section className="py-20">
         
         <Container className="text-[#DC4974] !max-w-[1400px] px-4 flex flex-col gap-20 md:gap-32">
