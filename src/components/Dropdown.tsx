@@ -17,7 +17,7 @@ const Dropdown = ({ title, content, gap = 5 }: Props) => {
     <div>
       <span
         onClick={toggleDropdown}
-        className="cursor-pointer text-[#DC4974] glow"
+        className="cursor-pointer text-[#DC4974] glow text-7xl"
       >
         {title}
       </span>

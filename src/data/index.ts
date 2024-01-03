@@ -16,21 +16,29 @@ export const accordion = {
   ALA: [
     "ALA is A-levels institution focused on developing the next generation of African leaders through a 2-year program. The program consisted of Cambridge syllabus education as well as courses designed to help students improve their leadership skills.",
     "I completed my A-levels in 2020, with 2 A-levels in Math and Economics and 2 AS-levels in English and Computer Science.",
-    "I seved as the CEO and CFO for the Assembly and Cultural Events student-led enterprise."
+    "I seved as the CEO and CFO for the Assembly and Cultural Events student-led enterprise.",
   ],
-  UofR: ["I study Computer Science with a minor in Psychology.",
-  "I work as a Web Developer for my University's logistics web app. The app is built using React.js and Node.js. My most recent contribution was the integration of Google's Sign in and Calendar APIs.",
-  "I also work as an IT consultant at the Simon Businss School. My roles include helping students, professors and other staff and faculty solve issues relating to installations, hardware, network and classroom technologies.",
-  "Between September 2021 and December 2021 I was a Teaching Assistant for an intro to python programming class. I worked alongside 12 students to help them solve problems and clarify course material. I also aided the professor with grading of homework and tests.",
-  "I also serve as the Publicity Chair for the University of Rochester Christian Fellowship (URCF)."
-],
+  UofR: [
+    "I study Computer Science with a minor in Psychology.",
+    "I work as a Web Developer for my University's logistics web app. The app is built using React.js and Node.js. My most recent contribution was the integration of Google's Sign in and Calendar APIs.",
+    "I also work as an IT consultant at the Simon Businss School. My roles include helping students, professors and other staff and faculty solve issues relating to installations, hardware, network and classroom technologies.",
+    "Between September 2021 and December 2021 I was a Teaching Assistant for an intro to python programming class. I worked alongside 12 students to help them solve problems and clarify course material. I also aided the professor with grading of homework and tests.",
+    "I also serve as the Publicity Chair for the University of Rochester Christian Fellowship (URCF).",
+  ],
+  SEO: [
+    "I had the privilege to be part of SEO's tech developer program, a career preparation program aimed at developing technical and career skills.",
+    "Throughout the program, I designed applications using Python, HTML/CSS and MySQL in both an individual and team setting.",
+  ],
+  "Acting Globally": [
+    "As part of a team of developers, we focused on creating innovative tools specifically tailored for volunteers and grassroots organizations.",
+    "I helped engineer a straightforward and efficient back-end system using MongoDB. This initiative was aimed at optimizing our data maintenance and retrieval processes.",
+  ],
 };
-
 
 export const languages = {
   Python: [
     "Python was the first programming language I learnt and has quickly become my favorite.",
-    "Most of my data structures and algorithm knowledge is in python and most of my projects are written in it as well",
+    "Most of my data structures and algorithm knowledge is in python and most of my projects are written in it as well.",
   ],
   "JavaScript and TypeScript": [
     "JavaScript is my second most used language because I primarily use it for my web developer roles and have begun developing projects using different frameworks.",
@@ -38,13 +46,19 @@ export const languages = {
   ],
   "C++ and C#": [
     "I have built a few terminal games using C++ purely out of interest in the language. I intend to scale it and use it to develop desktop applications",
-    "I am still a beginner with C# but use it with ASP.NET for web applications",
+    "I am still a beginner with C# but use it with ASP.NET for web applications.",
   ],
 };
 
-export const idTech = {
-  "ID Tech": [],
-};
+export const tools = {
+  "React & Node.js": [
+    "I use"
+  ], 
+  "Next.js & Tailwind": [], 
+
+  Flask: [],
+
+}
 
 export const headerLeftContent = [
   "My passion has always been problem solving, programming is just the most fulfilling way to do that. I love bringing my solutions to life through the code that I write.",
