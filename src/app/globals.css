@@ -2,22 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply bg-black text-white select-none;
-    background: url("https://www.toptal.com/designers/subtlepatterns/uploads/papyrus-dark.png")
-      repeat 0 0;
-    -webkit-animation: bg-scrolling-reverse 0.92s infinite;
-    -moz-animation: bg-scrolling-reverse 0.92s infinite;
-    -o-animation: bg-scrolling-reverse 0.92s infinite;
-    animation: bg-scrolling-reverse 0.92s infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-    -o-animation-timing-function: linear;
-    animation-timing-function: linear;
-  }
+@font-face {
+  font-family: sketchFont;
+  src: url("../../public/fonts/KGBlankSpaceSketch.ttf")
 }
 
+body {
+  font-family: sketchFont;
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+  background-image: url("../../public/images/green.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .swiper-slide {
   background-color: #ccc;

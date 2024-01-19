@@ -8,8 +8,8 @@ import useWindowSize from "@/hooks/useWindowSize";
 const Header = () => {
   const { width } = useWindowSize();
   return (
-    <div className="sticky top-0 z-20">
-      <Container className="flex justify-between py-8 text-sm header">
+    <div className="sticky top-0 z-20 text-gray-600">
+      <Container className="flex justify-between py-8 text-sm heade">
         <Link href="/">James Muguiyi</Link>
         <nav className="flex items-center gap-8">
           <Link href="https://www.github.com/jollofo">

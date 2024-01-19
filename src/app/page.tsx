@@ -15,19 +15,17 @@ import {
 
 export default function Home() {
   return (
-    <main className="min-h-screen text-[#49DCB1]">
-      <Header />
-      <header className="py-56">
-        <Container>
-          <h1 className="text-3xl sm:text-2xl md:text-5xl lg:text-6xl font-light sm:pr-10 md:pr-20 lg:pr-32 md::max-w-[900px] leading-[3.5rem] my-[3.5rem]">
-            Hi, I’m James - an aspiring software developer with a passion for
-            full stack development.
+    <main className={`min-h-screen`}>
+      <Header/>
+      <header className="py-56 my-20 text-white">
+          <div className="bg-black text-center w-full h-auto">
+          <h1 className="text-3xl sm:text-2xl md:text-5xl lg:text-6xl font-light md::max-w-[900px] leading-[3.5rem] my-[3.5rem]">
+            James Muguiyi
           </h1>
-          <br></br>
-        </Container>
+          </div>
       </header>
-      <Accordion content={accordion} />
-      <Container className="flex gap-10 pt-24 md:gap-20 flex-col md:flex-row font-light">
+      {/* <Accordion content={accordion} /> */}
+      <Container className="flex gap-10 pt-24 md:gap-20 flex-col md:flex-row font-light bg-white opacity-90 rounded-lg">
         <article className="text-2xl md:text-4xl leading-[1.4] md::max-w[900px]">
           <div className="pb-10">
             Throughout my experiences, I have had the opportunity to learn various
