@@ -15,13 +15,12 @@ import {
 
 export default function Home() {
   return (
-    <main className="min-h-screen text-[#49DCB1]">
+    <main className="min-h-screen text-black">
       <Header />
       <header className="py-56">
         <Container>
-          <h1 className="text-3xl sm:text-2xl md:text-5xl lg:text-6xl font-light sm:pr-10 md:pr-20 lg:pr-32 md::max-w-[900px] leading-[3.5rem] mt-20">
-            Hi, I’m James - an aspiring software developer with a passion for
-            full stack development.<br></br>Welcome to my page.
+          <h1 className="text-3xl sm:text-2xl md:text-5xl lg:text-6xl font-light md::max-w-[900px] leading-[3.5rem] mt-20 text-center">
+            Hi, I'm James Muguiyi
           </h1>
           <br></br>
         </Container>
