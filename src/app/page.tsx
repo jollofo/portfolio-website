@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import List from "@/components/List";
 import Slider from "@/components/Slider";
 import Dropdown from "@/components/Dropdown";
+import Accordion from "@/components/Accordion";
 import {
   headerLeftContent,
   headerRightContent,
@@ -26,6 +27,7 @@ export default function Home() {
         </Container>
       </header>
       <section className="py-56">
+        <Accordion content={uofr}/>
         <Container className="flex gap-10 md:gap-20 flex-col md:flex-row font-light">
           <article className="text-2xl md:text-4xl leading-[1.4] md::max-w[900px]">
             <p className="pb-10">
