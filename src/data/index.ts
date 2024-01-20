@@ -12,6 +12,29 @@ import f1 from "../../public/images/face-1.png";
 import f2 from "../../public/images/face-2.png";
 import f3 from "../../public/images/face-3.png";
 
+export const accordion = {
+  ALA: [
+    "ALA is A-levels institution focused on developing the next generation of African leaders through a 2-year program. The program consisted of Cambridge syllabus education as well as courses designed to help students improve their leadership skills.",
+    "I completed my A-levels in 2020, with 2 A-levels in Math and Economics and 2 AS-levels in English and Computer Science.",
+    "I seved as the CEO and CFO for the Assembly and Cultural Events student-led enterprise.",
+  ],
+  UofR: [
+    "I study Computer Science with a minor in Psychology.",
+    "I work as a Web Developer for my University's logistics web app. The app is built using React.js and Node.js. My most recent contribution was the integration of Google's Sign in and Calendar APIs.",
+    "I also work as an IT consultant at the Simon Businss School. My roles include helping students, professors and other staff and faculty solve issues relating to installations, hardware, network and classroom technologies.",
+    "Between September 2021 and December 2021 I was a Teaching Assistant for an intro to python programming class. I worked alongside 12 students to help them solve problems and clarify course material. I also aided the professor with grading of homework and tests.",
+    "I also serve as the Publicity Chair for the University of Rochester Christian Fellowship (URCF).",
+  ],
+  SEO: [
+    "I had the privilege to be part of SEO's tech developer program, a career preparation program aimed at developing technical and career skills.",
+    "Throughout the program, I designed applications using Python, HTML/CSS and MySQL in both an individual and team setting.",
+  ],
+  "Acting Globally": [
+    "As part of a team of developers, we focused on creating innovative tools specifically tailored for volunteers and grassroots organizations.",
+    "I helped engineer a straightforward and efficient back-end system using MongoDB. This initiative was aimed at optimizing our data maintenance and retrieval processes.",
+  ],
+};
+
 export const uofr = {
   Academics: ["I study Computer Science with a minor in Psychology."],
   Work: ["I work as a Web Developer for my University's logistics web app. The app is built using React.js and Node.js. My most recent contribution was the integration of Google's Sign in and Calendar APIs.",

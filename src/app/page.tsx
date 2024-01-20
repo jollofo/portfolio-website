@@ -11,7 +11,8 @@ import {
   works,
   uofr,
   ala,
-  technologies
+  technologies,
+  accordion,
 } from "@/data";
 
 export default function Home() {
@@ -26,8 +27,8 @@ export default function Home() {
           <br></br>
         </Container>
       </header>
+      <Accordion content={accordion} />
       <section className="py-56">
-        <Accordion content={uofr}/>
         <Container className="flex gap-10 md:gap-20 flex-col md:flex-row font-light">
           <article className="text-2xl md:text-4xl leading-[1.4] md::max-w[900px]">
             <p className="pb-10">
@@ -47,7 +48,7 @@ export default function Home() {
                 content={ala}
                 gap={10}
               />{" "}
-              in South Africa. 
+              in South Africa.
             </p>
 
             <p className="pb-10">
@@ -56,7 +57,7 @@ export default function Home() {
                 title="various technologies."
                 content={technologies}
                 gap={10}
-              /> 
+              />
             </p>
 
             {headerLeftContent.map((p, i) => (
