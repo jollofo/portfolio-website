@@ -20,12 +20,12 @@ export default function Home() {
       <header className="py-56">
         <Container>
           <h1 className="text-3xl sm:text-2xl md:text-5xl lg:text-6xl font-light md::max-w-[900px] leading-[3.5rem] mt-20 text-center">
-            Hi, I'm James Muguiyi
+            Hi, I'm James
           </h1>
           <br></br>
         </Container>
       </header>
-      <section className="py-20">
+      <section className="py-56">
         <Container className="flex gap-10 md:gap-20 flex-col md:flex-row font-light">
           <article className="text-2xl md:text-4xl leading-[1.4] md::max-w[900px]">
             <p className="pb-10">

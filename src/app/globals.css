@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "sketch";
-  src: url("../../public/fonts/FrederickatheGreat-Regular.ttf");
+  font-family: sketchFont;
+  src: url("../../public/fonts/KGBlankSpaceSketch.ttf");
 }
 
 body {
   background: url("../../public/images/bg.png");
-  font-family: "sketch";
+  font-family: sketchFont;
 }
 
 .swiper-slide {
@@ -85,7 +85,7 @@ span a:hover::after {
 }
 
 .header a {
-  color: #ffffff !important;
+  color: #000 !important;
 }
 
 /* Width and Track Color */
