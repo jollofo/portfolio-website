@@ -4,16 +4,16 @@ import Header from "@/components/Header";
 import List from "@/components/List";
 import Slider from "@/components/Slider";
 import Dropdown from "@/components/Dropdown";
-import Accordion from "@/components/Accordion";
+import Card from "@/components/Card";
 import {
-  headerLeftContent,
   headerRightContent,
-  works,
-  uofr,
-  ala,
+  facts,
+  projects,
+  education,
+  work,
   technologies,
-  accordion,
 } from "@/data";
+import GridList from "@/components/GridList";
 
 export default function Home() {
   return (
@@ -21,71 +21,48 @@ export default function Home() {
       <Header />
       <header className="py-56">
         <Container>
-          <h1 className="text-3xl sm:text-2xl md:text-5xl lg:text-6xl font-light md::max-w-[900px] leading-[3.5rem] mt-20 text-center">
-            Hi, I'm James
+          <h1 className="text-5xl sm:text-3xl md:text-5xl lg:text-6xl font-light md::max-w-[900px] leading-[3.5rem] mt-20 ">
+            Hi, {"I'm"} James
           </h1>
-          <br></br>
+          <h2 className="text-3xl pt-10 pb-20 pr-20">
+            An aspiring software engineer interested in computer vision and
+            frontend development.
+          </h2>
         </Container>
       </header>
-      <Accordion content={accordion} />
-      <section className="py-56">
+      <Card title={"Education"} cols={2} content={education} />
+      <GridList content={technologies} />
+      <Card title={"Work"} cols={2} content={work} />
+      <section className="pt-48">
+        <Container className="text-black !max-w-[1400px] px-4 flex flex-col gap-20 md:gap-32">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl">Projects —</h1>
+          {projects.map((item, i) => (
+            <Slider key={i} title={item.title} data={item.data} />
+          ))}
+        </Container>
+      </section>
+      <section className="mt-36 py-36 bg-white">
         <Container className="flex gap-10 md:gap-20 flex-col md:flex-row font-light">
-          <article className="text-2xl md:text-4xl leading-[1.4] md::max-w[900px]">
+          <article className="text-2x md:text-4xl leading-[1.4] md::max-w[900px]">
             <p className="pb-10">
-              I am currently a senior at the
-              <Dropdown
-                title="University of Rochester."
-                content={uofr}
-                gap={10}
-              />{" "}
-              in Rochester, New York.
+              I often struggle to introduce myself without mentioning work or
+              school.
             </p>
-
             <p className="pb-10">
-              Prior to this, I had the privilege to attend the
-              <Dropdown
-                title="African Leadership Academy"
-                content={ala}
-                gap={10}
-              />{" "}
-              in South Africa.
+              But now that those are out of the way, we can end on some "fun"
+              <Dropdown title="facts" content={facts} gap={10} />
+              about me!
             </p>
-
             <p className="pb-10">
-              Throughout these experience, I have had the privilege to learn
-              <Dropdown
-                title="various technologies."
-                content={technologies}
-                gap={10}
-              />
+              Thats my website. Thank you for checking it out!
             </p>
-
-            {headerLeftContent.map((p, i) => (
-              <>
-                <p
-                  className="pb-10"
-                  key={i}
-                  dangerouslySetInnerHTML={{ __html: p }}
-                />
-              </>
-            ))}
           </article>
 
-          <div className="text-[#DC4974] min-w-[300px] flex flex-col gap-4">
+          <div className="text-black min-w-[300px] flex flex-col gap-4">
             <List
               gap={10}
-              title="Education —————————"
-              content={headerRightContent.education}
-            />
-            <List
-              gap={10}
-              title="Experiences ————————"
-              content={headerRightContent.experiences}
-            />
-            <List
-              gap={10}
-              title="Activities —————————"
-              content={headerRightContent.activities}
+              title="Certificates —————————"
+              content={headerRightContent.certifcates}
             />
             <span>
               <a
@@ -97,16 +74,6 @@ export default function Home() {
               </a>
             </span>
           </div>
-        </Container>
-      </section>
-      <section className="py-20">
-        <Container className="text-[#DC4974] !max-w-[1400px] px-4 flex flex-col gap-20 md:gap-32">
-          <h1 className="text-[#49DCB1] text-3xl md:text-5xl lg:text-7xl">
-            Projects —
-          </h1>
-          {works.map((work, i) => (
-            <Slider key={i} title={work.title} data={work.data} />
-          ))}
         </Container>
       </section>
     </main>

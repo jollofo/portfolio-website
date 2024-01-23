@@ -9,7 +9,7 @@ interface Props {
 const List = ({ title, content, gap = 4 }: Props) => {
   return (
     <div>
-      <p className="text-gray-400/80 md:text-sm xl:text-base mb-4 font-medium">
+      <p className="text-[#6a5acd] md:text-sm xl:text-base mb-4 font-medium">
         {title}
       </p>
       <ul style={{ gap }} className="flex flex-col">

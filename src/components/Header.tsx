@@ -13,10 +13,10 @@ const Header = () => {
         <Link href="/">James Muguiyi</Link>
         <nav className="flex items-center gap-8">
           <Link href="https://www.github.com/jollofo">
-            {width >= 776 ? "github" : <BsGithub className="text-3xl" />}
+            {width >= 776 ? "Github" : <BsGithub className="text-3xl" />}
           </Link>
-          <Link href="https://www.linkedin.com/in/james-muguiyi-838917209/">
-            {width >= 776 ? "linkedin" : <BsLinkedin className="text-3xl" />}
+          <Link href="https://www.linkedin.com/in/jamesmuguiyi">
+            {width >= 776 ? "Linkedin" : <BsLinkedin className="text-3xl" />}
           </Link>
           {width < 776 && (
             <Link href="/">
@@ -24,7 +24,11 @@ const Header = () => {
             </Link>
           )}
         </nav>
-        {width >= 776 && <Link href="https://www.jmuguiyijr@gmail.com">jmuguiyijr@gmail.com</Link>}
+        {width >= 776 && (
+          <Link href="https://www.jmuguiyijr@gmail.com">
+            jmuguiyijr@gmail.com
+          </Link>
+        )}
       </Container>
     </div>
   );
