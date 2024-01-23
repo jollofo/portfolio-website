@@ -49,7 +49,7 @@ export default function Home() {
               school.
             </p>
             <p className="pb-10">
-              But now that those are out of the way, we can end on some "fun"
+              But now that those are out of the way, we can end on some {"fun"}
               <Dropdown title="facts" content={facts} gap={10} />
               about me!
             </p>
