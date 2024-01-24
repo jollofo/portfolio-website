@@ -31,7 +31,7 @@ export const education = [
     title: "African Leadership Academy",
     date: "2018-2020",
     paragraph:
-      "ALA is an A-levels program based in South Africa that focuses on developing the next generation of leaders. I had the privilege the program where I finished with two AS-levels in English and Computer Science and 2 A-levels in Economics and Math.",
+      "ALA is an A-levels program based in South Africa that focuses on developing the next generation of leaders. I had the privilege to attend the program where I finished with two AS-levels in English and Computer Science and 2 A-levels in Economics and Math.",
   },
 ];
 
