@@ -23,7 +23,7 @@ export const facts = [
 export const education = [
   {
     title: "University of Rochester",
-    date: "2020-2024",
+    date: "2020-2025",
     paragraph:
       "I am in my Senior year studying Computer Science with a minor in Psychology. Outside of school, I am part of organizations such as the Pan-African Students Association and NSBE. I am also the Publicity Chair for the University of Rochester Christian Fellowship.",
   },
