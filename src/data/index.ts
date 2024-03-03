@@ -5,19 +5,19 @@ import asl3 from "../../public/images/asl-reader-2.png";
 import hvc1 from "../../public/images/gesture-volume-control-1.png";
 import hvc2 from "../../public/images/gesture-volume-control-2.png";
 import hvc3 from "../../public/images/gesture-volume-control-3.png";
-import b1 from "../../public/images/baccarat-1.png";
-import b2 from "../../public/images/baccarat-2.png";
-import b3 from "../../public/images/baccarat-3.jpg";
 import f1 from "../../public/images/face-1.png";
 import f2 from "../../public/images/face-2.png";
 import f3 from "../../public/images/face-3.png";
+import c1 from "../../public/images/cache-1.png";
+import c2 from "../../public/images/cache-2.png";
+import c3 from "../../public/images/cache-3.png";
 
 export const facts = [
   "I was born and raised in Nairobi, Kenya.",
   "I enjoy reading, playing video games, being outside and being active.",
   "I am super interested in philosophy, specifically ethics. My favorite philosopher is Seneca.",
   "I got into programming from my love of video games and my interest in how they're made.",
-  "My favorite book is An Inspector Calls by J. B. Priestly, and my favorite game right now is Red Dead Redemption 2.",
+  "My favorite book is 1984 by George Orwell.",
 ];
 
 export const education = [
@@ -139,9 +139,31 @@ export const projects: Props[] = [
           type: "image",
         },
       ],
-      left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, MediaPipe, Numpy, CVZone</p><strong>Other:</strong><br>Google\'s Teachable Machine</br><span><a href="https://github.com/jollofo/asl-reader" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
+      left: '<p><strong>Tech Stack:</strong></br>Python</br><strong>Libraries:</strong><br>OpenCV, MediaPipe, Numpy, CVZone</p><strong>Other:</strong><br>Google\'s Teachable Machine<br/></br><span><a href="https://github.com/jollofo/asl-reader" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
       right:
         "<p>This project recognizes which letters, from the ASL alphabet, are being displayed on the video stream. It contains 1 folder and 2 files. The folder stores images that can be generated from the <strong>HandSignData.py</strong> file. It crops your hand out from a live video stream and saves images upon clicking the 's' key. This data is then used to power the <strong>HandSignTester.py</strong> file which recognizes which signs are being displayed by your hands and displays the result on the video stream. I used Google's Teachable Machine to train the model.</p>",
+    },
+  },
+  {
+    title: "Face Detector - Attendance Tracker",
+    data: {
+      media: [
+        {
+          src: f1,
+          type: "image",
+        },
+        {
+          src: f2,
+          type: "image",
+        },
+        {
+          src: f3,
+          type: "image",
+        },
+      ],
+      left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, Pickle, Numpy</p><strong>Other:</strong><br/>Firebase<br/><br/><span><a href="https://github.com/jollofo/face-detector" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
+      right:
+        "<p>This project uses a live video stream to recognize your face and match it to the information in the database. If your data is in the database, it records your attendance. It contains 3 files: <strong>databaseManager.py</strong> holds the data that the program checks against and handles some of the firebase certificates. <strong>encoder.py</strong> encodes the image data in order to store it more efficiently. Lastly, <strong>main.py</strong> brings everything together. It contains the face tracking code and does the matching of information. If a match is found it upadtes the necessary information.</p>",
     },
   },
   {
@@ -167,47 +189,47 @@ export const projects: Props[] = [
     },
   },
   {
-    title: "Homemade Baccarat",
+    title: "Cache",
     data: {
       media: [
         {
-          src: b1,
+          src: c1,
           type: "image",
         },
         {
-          src: b2,
+          src: c3,
           type: "image",
         },
         {
-          src: b3,
+          src: c2,
           type: "image",
         },
       ],
-      left: '<p><strong>Tech Stack:</strong> </br>C++</br><br /><span><a href="https://github.com/jollofo/homemade-baccarat" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
+      left: '<p><strong>Tech Stack:</strong></br>React.js, C#<br/><strong>Libraries:</strong><br/>Tailwind.css<br/><strong>Other:</strong><br/>Firebase<br/><br/><span><a href="https://github.com/jollofo/Cache" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
       right:
-        "<p>This is project is a simple implementation of the card game, baccarat. It was my first project in C++ and is playable within the terminal. It contains only one file, <strong>main.cpp</strong>, which holds all the code necessary to play the game as well as the rules.</p>",
+        "<p>Cache is a an online image hosting and sharing platform intended to give people the ability to upload pictures and share them easily. It works by allowing users to create a room and upload images to it. Each room has a unique key that they can then share with people who will be able to access the room. Each room exists temporarily and can be deleted by a user or is deleted automatically after the allocated time. The images are stored in a <strong>Firbase</strong> storage bucket. The front end is built using <strong>React.js</strong> and <strong>Tailwind.css</strong> while the back end is built in <strong>C#</strong>.</p>",
     },
   },
   {
-    title: "Face Detector - Attendance Tracker",
+    title: "Golazo",
     data: {
       media: [
         {
-          src: f1,
+          src: c1,
           type: "image",
         },
         {
-          src: f2,
+          src: c2,
           type: "image",
         },
         {
-          src: f3,
+          src: c3,
           type: "image",
         },
       ],
-      left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, Pickle, Numpy, Firebase</p><br /><span><a href="https://github.com/jollofo/face-detector" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
+      left: '<p><strong>Tech Stack:</strong></br>React.js, C#<br/><strong>Libraries:</strong><br/>Tailwind.css<br/><strong>Other:</strong><br/>Firebase<br/><br/><span><a href="https://github.com/jollofo/Cache" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
       right:
-        "<p>This project uses a live video stream to recognize your face and match it to the information in the database. If your data is in the database, it records your attendance. It contains 3 files: <strong>databaseManager.py</strong> holds the data that the program checks against and handles some of the firebase certificates. <strong>encoder.py</strong> encodes the image data in order to store it more efficiently. Lastly, <strong>main.py</strong> brings everything together. It contains the face tracking code and does the matching of information. If a match is found it upadtes the necessary information.</p>",
+        "<p>Cache is a an online image hosting and sharing platform intended to give people the ability to upload pictures and share them easily. It works by allowing users to create a room and upload images to it. Each room has a unique key that they can then share with people who will be able to access the room. Each room exists temporarily and can be deleted by a user or is deleted automatically after the allocated time. The images are stored in a <strong>Firbase</strong> storage bucket. The front end is built using <strong>React.js</strong> and <strong>Tailwind.css</strong> while the back end is built in <strong>C#</strong>.</p>",
     },
   },
 ];
