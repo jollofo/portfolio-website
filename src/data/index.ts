@@ -210,26 +210,4 @@ export const projects: Props[] = [
         "<p>Cache is a an online image hosting and sharing platform intended to give people the ability to upload pictures and share them easily. It works by allowing users to create a room and upload images to it. Each room has a unique key that they can then share with people who will be able to access the room. Each room exists temporarily and can be deleted by a user or is deleted automatically after the allocated time. The images are stored in a <strong>Firbase</strong> storage bucket. The front end is built using <strong>React.js</strong> and <strong>Tailwind.css</strong> while the back end is built in <strong>C#</strong>.</p>",
     },
   },
-  {
-    title: "Golazo",
-    data: {
-      media: [
-        {
-          src: c1,
-          type: "image",
-        },
-        {
-          src: c2,
-          type: "image",
-        },
-        {
-          src: c3,
-          type: "image",
-        },
-      ],
-      left: '<p><strong>Tech Stack:</strong></br>React.js, C#<br/><strong>Libraries:</strong><br/>Tailwind.css<br/><strong>Other:</strong><br/>Firebase<br/><br/><span><a href="https://github.com/jollofo/Cache" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
-      right:
-        "<p>Cache is a an online image hosting and sharing platform intended to give people the ability to upload pictures and share them easily. It works by allowing users to create a room and upload images to it. Each room has a unique key that they can then share with people who will be able to access the room. Each room exists temporarily and can be deleted by a user or is deleted automatically after the allocated time. The images are stored in a <strong>Firbase</strong> storage bucket. The front end is built using <strong>React.js</strong> and <strong>Tailwind.css</strong> while the back end is built in <strong>C#</strong>.</p>",
-    },
-  },
 ];

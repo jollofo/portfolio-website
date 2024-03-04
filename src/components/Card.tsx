@@ -15,7 +15,7 @@ interface Props {
 const Card = ({ title, cols, content }: Props) => {
   return (
     <div className="bg-white py-8 w-full sm:py-16">
-      <Container>
+      <Container className="!max-w-[1400px]">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-3xl md:text-5xl lg:text-7xl tracking-tight text-black sm:text-4xl">
