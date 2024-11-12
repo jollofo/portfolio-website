@@ -15,9 +15,8 @@ import c3 from "../../public/images/cache-3.png";
 export const facts = [
   "I was born and raised in Nairobi, Kenya.",
   "I enjoy reading, playing video games, being outside and being active.",
-  "I am super interested in philosophy, specifically ethics. My favorite philosopher is Seneca.",
-  "I got into programming from my love of video games and my interest in how they're made.",
-  "My favorite book is 1984 by George Orwell.",
+  "I am super interested in philosophy, specifically ethics. Highly recommend Letter from a Stoic by Seneca.",
+  "My favorite book is 1984 by George Orwell. ",
 ];
 
 export const education = [
@@ -38,13 +37,13 @@ export const education = [
 export const work = [
   {
     title: "Online Instructor - iD Tech",
-    date: "Dec 2023 - Present",
+    date: "Dec 2023 - May 2024",
     paragraph:
       "At iD Tech, I provide dynamic and interactive online learning experience in Python, JavaScript, and C++ for both groups and individuals. My focus is on customizing each curriculum to fit each student's aspirations while ensuring smooth virtual classes.",
   },
   {
     title: "Intern - Acting Globally",
-    date: "Sep 2023 - Present",
+    date: "Sep 2023 - Aug 2024",
     paragraph:
       "I'm part of a four-person team developing new tools for volunteers and community organizations.",
   },
@@ -55,7 +54,7 @@ export const work = [
       "As a Web Developer, I mainly update our University IT's logistics web application. I've spearheaded the integration of Google APIs, to help streamline schedule management for the university community. ",
   },
   {
-    title: "Tech Developer Inter - SEO Career",
+    title: "Tech Developer Intern - SEO Career",
     date: "Jun 2022 - May 2023",
     paragraph:
       "SEO Tech Developer is a remote tech training course that I had the opportunity to participate in. I immersed myself in a comprehensive prep program, accruing over 300 hours of training and creating web applications that leverage a broad range of technologies. ",
@@ -87,8 +86,8 @@ export const technologies = [
     src: "https://5.imimg.com/data5/HT/HX/YO/GLADMIN-13634783/selection-208-500x500.png",
   },
   {
-    title: "C#",
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgngNtdqjqeLvzKK1QlkMMDONwXWBJ8D3Dlw&usqp=CAU",
+    title: "Java",
+    src: "https://www.svgrepo.com/show/353924/java.svg",
   },
   {
     title: "PostgreSQL",

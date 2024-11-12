@@ -5,6 +5,7 @@ import List from "@/components/List";
 import Slider from "@/components/Slider";
 import Dropdown from "@/components/Dropdown";
 import Card from "@/components/Card";
+import GridList from "@/components/GridList";
 import {
   headerRightContent,
   facts,
@@ -13,7 +14,7 @@ import {
   work,
   technologies,
 } from "@/data";
-import GridList from "@/components/GridList";
+import Notepad from "@/components/Notepad";
 
 export default function Home() {
   return (
@@ -25,13 +26,18 @@ export default function Home() {
             Hi, {"I'm"} James
           </h1>
           <h2 className="text-3xl pt-10 pb-20 pr-20">
-            An aspiring software engineer interested in computer vision and
-            frontend development.
+            An aspiring software engineer interested in Cloud Infrastructure and
+            Human-Computer Interaction.
           </h2>
         </Container>
       </header>
       <Card title={"Education"} cols={2} content={education} />
       <GridList content={technologies} />
+      {/* <section className="grid grid-flow-col place-content-center gap-1">
+        <Notepad color={"blue"}/>
+        <Notepad color={"green"}/>
+        <Notepad color={"red"}/>
+      </section> */}
       <Card title={"Work"} cols={2} content={work} />
       <section className="pt-48">
         <Container className="text-black !max-w-[1400px] px-4 flex flex-col gap-20 md:gap-32">
@@ -53,9 +59,6 @@ export default function Home() {
               <Dropdown title="facts" content={facts} gap={10} />
               about me!
             </p>
-            <p className="pb-10">
-              Thats my website. Thank you for checking it out!
-            </p>
           </article>
 
           <div className="text-black min-w-[300px] flex flex-col gap-4">
@@ -66,7 +69,7 @@ export default function Home() {
             />
             <span>
               <a
-                href="https://github.com/jollofo/portfolio-website/blob/main/public/Muguiyi_James_Resume.pdf"
+                href="https://github.com/jollofo/portfolio-website/blob/main/public/James_Muguiyi_Resume.pdf"
                 target="undefined"
                 rel="noopener noreferrer"
               >
