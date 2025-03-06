@@ -11,6 +11,10 @@ import f3 from "../../public/images/face-3.png";
 import c1 from "../../public/images/cache-1.png";
 import c2 from "../../public/images/cache-2.png";
 import c3 from "../../public/images/cache-3.png";
+import g1 from "../../public/images/golazo_1.png";
+import g2 from "../../public/images/golazo_2.png";
+import g3 from "../../public/images/golazo_3.png";
+import g4 from "../../public/images/golazo_4.png";
 
 export const facts = [
   "I was born and raised in Nairobi, Kenya.",
@@ -39,13 +43,13 @@ export const work = [
     title: "Online Instructor - iD Tech",
     date: "Dec 2023 - May 2024",
     paragraph:
-      "At iD Tech, I provide dynamic and interactive online learning experience in Python, JavaScript, and C++ for both groups and individuals. My focus is on customizing each curriculum to fit each student's aspirations while ensuring smooth virtual classes.",
+      "At iD Tech, I provided dynamic and interactive online learning experience in Python, JavaScript, and C++ for both groups and individuals. My focus was on customizing each curriculum to fit each student's aspirations while ensuring smooth virtual classes.",
   },
   {
     title: "Intern - Acting Globally",
     date: "Sep 2023 - Aug 2024",
     paragraph:
-      "I'm part of a four-person team developing new tools for volunteers and community organizations.",
+      "I was part of a four-person team developing new tools for volunteers and community organizations.",
   },
   {
     title: "Web Developer - University of Rochester",
@@ -163,6 +167,32 @@ export const projects: Props[] = [
       left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, Pickle, Numpy</p><strong>Other:</strong><br/>Firebase<br/><br/><span><a href="https://github.com/jollofo/face-detector" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
       right:
         "<p>This project uses a live video stream to recognize your face and match it to the information in the database. If your data is in the database, it records your attendance. It contains 3 files: <strong>databaseManager.py</strong> holds the data that the program checks against and handles some of the firebase certificates. <strong>encoder.py</strong> encodes the image data in order to store it more efficiently. Lastly, <strong>main.py</strong> brings everything together. It contains the face tracking code and does the matching of information. If a match is found it upadtes the necessary information.</p>",
+    },
+  },
+  {
+    title: "Golazo.UR - FIFA Tracking System",
+    data: {
+      media: [
+        {
+          src: g1,
+          type: "image",
+        },
+        {
+          src: g2,
+          type: "image",
+        },
+        {
+          src: g3,
+          type: "image",
+        },
+        {
+          src: g4,
+          type: "image",
+        },
+      ],
+      left: '<p><strong>Tech Stack:</strong> </br>TypeScript, SQL</br><strong>Libraries:</strong><br>Motion</p><strong>Other:</strong><br/>PostgreSQL<br/><br/><span><a href="https://github.com/jollofo/face-detector" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
+      right:
+        "<p>Golazo is a web application that aims to streamline and manage FIFA players, tournaments and rankings for FIFA enthusiasts across Rochester. With <strong/>50+ active users</strong> spread across the University of Rochester, Monroe Community College and Rochester Institute of Technology, Golazo strives to be an evolving hub for FIFA players.</p>",
     },
   },
   {

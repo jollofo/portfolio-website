@@ -47,38 +47,7 @@ export default function Home() {
           ))}
         </Container>
       </section>
-      <section className="mt-36 py-36 bg-white">
-        <Container className="flex gap-10 md:gap-20 flex-col md:flex-row font-light">
-          <article className="text-2x md:text-4xl leading-[1.4] md::max-w[900px]">
-            <p className="pb-10">
-              I often struggle to introduce myself without mentioning work or
-              school.
-            </p>
-            <p className="pb-10">
-              But now that those are out of the way, we can end on some {'\"fun\"'}
-              <Dropdown title="facts" content={facts} gap={10} />
-              about me!
-            </p>
-          </article>
-
-          <div className="text-black min-w-[300px] flex flex-col gap-4">
-            <List
-              gap={10}
-              title="Certificates —————————"
-              content={headerRightContent.certifcates}
-            />
-            <span>
-              <a
-                href="https://github.com/jollofo/portfolio-website/blob/main/public/James_Muguiyi_Resume.pdf"
-                target="undefined"
-                rel="noopener noreferrer"
-              >
-                Resume
-              </a>
-            </span>
-          </div>
-        </Container>
-      </section>
+      <section className="py-4"></section>
     </main>
   );
 }
