@@ -160,7 +160,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-serif mb-12 text-center text-white">About Me</h2>
             <div className="space-y-6 text-lg leading-relaxed text-gray-300">
               <p>
-                I'm a passionate software engineer with a keen interest in cloud infrastructure and human-computer interaction. 
+                I&apos;m a passionate software engineer with a keen interest in cloud infrastructure and human-computer interaction. 
                 My journey in technology is driven by a desire to create innovative solutions that make a difference.
               </p>
               <p>
