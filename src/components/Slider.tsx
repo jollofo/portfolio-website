@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
 
-interface SliderProps {
+export interface SliderProps {
   title: string;
   data: {
     media: Array<{

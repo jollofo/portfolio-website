@@ -1,4 +1,4 @@
-import { Props } from "@/components/Slider";
+import { SliderProps } from "@/components/Slider";
 import asl1 from "../../public/images/asl-alphabet.jpg";
 import asl2 from "../../public/images/asl-reader-1.png";
 import asl3 from "../../public/images/asl-reader-2.png";
@@ -143,7 +143,7 @@ export const headerRightContent = {
   ],
 };
 
-export const projects: Props[] = [
+export const projects: SliderProps[] = [
   {
     title: "American Sign Language Reader",
     data: {
