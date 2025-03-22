@@ -161,7 +161,7 @@ export const projects: Props[] = [
           type: "image",
         },
       ],
-      left: '<p><strong>Tech Stack:</strong></br>Python</br><strong>Libraries:</strong><br>OpenCV, MediaPipe, Numpy, CVZone</p><strong>Other:</strong><br>Google\'s Teachable Machine<br/></br><span><a href="https://github.com/jollofo/asl-reader" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
+      left: '<p><strong>Tech Stack:</strong></br>Python</br><strong>Libraries:</strong><br>OpenCV, MediaPipe, Numpy, CVZone</p><strong>Other:</strong><br>Google\'s Teachable Machine<br/></br><span><a href="https://github.com/jollofo/asl-reader" target="_blank" rel="noopener noreferrer">GITHUB LINK</a></span>',
       right:
         "<p>This project recognizes which letters, from the ASL alphabet, are being displayed on the video stream. It contains 1 folder and 2 files. The folder stores images that can be generated from the <strong>HandSignData.py</strong> file. It crops your hand out from a live video stream and saves images upon clicking the 's' key. This data is then used to power the <strong>HandSignTester.py</strong> file which recognizes which signs are being displayed by your hands and displays the result on the video stream. I used Google's Teachable Machine to train the model.</p>",
     },
@@ -183,7 +183,7 @@ export const projects: Props[] = [
           type: "image",
         },
       ],
-      left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, Pickle, Numpy</p><strong>Other:</strong><br/>Firebase<br/><br/><span><a href="https://github.com/jollofo/face-detector" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
+      left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, Pickle, Numpy</p><strong>Other:</strong><br/>Firebase<br/><br/><span><a href="https://github.com/jollofo/face-detector" target="_blank" rel="noopener noreferrer">GITHUB LINK</a></span>',
       right:
         "<p>This project uses a live video stream to recognize your face and match it to the information in the database. If your data is in the database, it records your attendance. It contains 3 files: <strong>databaseManager.py</strong> holds the data that the program checks against and handles some of the firebase certificates. <strong>encoder.py</strong> encodes the image data in order to store it more efficiently. Lastly, <strong>main.py</strong> brings everything together. It contains the face tracking code and does the matching of information. If a match is found it upadtes the necessary information.</p>",
     },
@@ -209,7 +209,7 @@ export const projects: Props[] = [
           type: "image",
         },
       ],
-      left: '<p><strong>Tech Stack:</strong> </br>TypeScript, SQL</br><strong>Libraries:</strong><br>Motion</p><strong>Other:</strong><br/>PostgreSQL<br/><br/><span><a href="https://github.com/jollofo/face-detector" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
+      left: '<p><strong>Tech Stack:</strong> </br>TypeScript, SQL</br><strong>Libraries:</strong><br>Motion</p><strong>Other:</strong><br/>PostgreSQL<br/><br/><span><a href="https://github.com/jollofo/golazo" target="_blank" rel="noopener noreferrer">GITHUB LINK</a></span>',
       right:
         "<p>Golazo is a web application that aims to streamline and manage FIFA players, tournaments and rankings for FIFA enthusiasts across Rochester. With <strong/>50+ active users</strong> spread across the University of Rochester, Monroe Community College and Rochester Institute of Technology, Golazo strives to be an evolving hub for FIFA players.</p>",
     },
@@ -231,7 +231,7 @@ export const projects: Props[] = [
           type: "image",
         },
       ],
-      left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, MediaPipe, Numpy, ComTypes</p><br /><span><a href="https://github.com/jollofo/gesture-volume-control" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
+      left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, MediaPipe, Numpy, ComTypes</p><br /><span><a href="https://github.com/jollofo/gesture-volume-control" target="_blank" rel="noopener noreferrer">GITHUB LINK</a></span>',
       right:
         "<p>This project allows you to control your volume from a live video stream using your finger and thumb. It contains two files: The first, <strong>HandTrackingMod.py</strong>, implements a program that tracks your hands on a live video stream using the MediaPipe and CVZone libraries. This program is used in the <strong>VolumeHandControl.py</strong> file, which does the bulk of the work. It connects to your PC's volume controls and increases or decreases the volume according to the distance between your finger and thumb. This is done on a live video stream where your current volume is displayed alongside the distance between your finger and thumb.</p>",
     },
@@ -253,7 +253,7 @@ export const projects: Props[] = [
           type: "image",
         },
       ],
-      left: '<p><strong>Tech Stack:</strong></br>React.js, C#<br/><strong>Libraries:</strong><br/>Tailwind.css<br/><strong>Other:</strong><br/>Firebase<br/><br/><span><a href="https://github.com/jollofo/Cache" target="undefined" rel="noopener noreferrer">GITHUB LINK</a></span>',
+      left: '<p><strong>Tech Stack:</strong></br>React.js, C#<br/><strong>Libraries:</strong><br/>Tailwind.css<br/><strong>Other:</strong><br/>Firebase<br/><br/><span><a href="https://github.com/jollofo/Cache" target="_blank" rel="noopener noreferrer">GITHUB LINK</a></span>',
       right:
         "<p>Cache is a an online image hosting and sharing platform intended to give people the ability to upload pictures and share them easily. It works by allowing users to create a room and upload images to it. Each room has a unique key that they can then share with people who will be able to access the room. Each room exists temporarily and can be deleted by a user or is deleted automatically after the allocated time. The images are stored in a <strong>Firbase</strong> storage bucket. The front end is built using <strong>React.js</strong> and <strong>Tailwind.css</strong> while the back end is built in <strong>C#</strong>.</p>",
     },
