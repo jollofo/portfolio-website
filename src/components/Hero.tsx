@@ -13,7 +13,7 @@ const Hero = () => {
           className="max-w-4xl mx-auto text-center"
         >
           <h1 className="text-5xl md:text-7xl font-serif mb-6 text-white">
-            Hi, I'm James
+            Hi, I&apos;m James
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
             An aspiring software engineer interested in Cloud Infrastructure and Human-Computer Interaction

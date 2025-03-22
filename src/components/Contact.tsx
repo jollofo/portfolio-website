@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiMail, FiLinkedin, FiTwitter } from 'react-icons/fi';
+import { FiMail, FiLinkedin } from 'react-icons/fi';
 
 const Contact = () => {
   return (
@@ -15,32 +15,24 @@ const Contact = () => {
         >
           <h2 className="text-4xl md:text-5xl mb-8 font-serif">Get in Touch</h2>
           <p className="text-lg text-gray-600 mb-12">
-            Interested in working together? Let's start a conversation.
+            Interested in working together? Let&apos;s start a conversation.
           </p>
           <div className="flex flex-col items-center space-y-6">
             <a
-              href="mailto:contact@makoye.com"
+              href="mailto:contact@jmuguiyijr@gmail.com"
               className="text-xl hover:opacity-70 transition-opacity"
             >
               <FiMail className="inline-block mr-2" />
-              contact@makoye.com
+              contact@jmuguiyi.com
             </a>
             <div className="flex space-x-6">
               <a
-                href="https://linkedin.com/company/makoye"
+                href="https://linkedin.com/in/jamesmuguiyi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xl hover:opacity-70 transition-opacity"
               >
                 <FiLinkedin />
-              </a>
-              <a
-                href="https://twitter.com/makoye"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xl hover:opacity-70 transition-opacity"
-              >
-                <FiTwitter />
               </a>
             </div>
           </div>
