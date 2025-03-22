@@ -1,61 +1,129 @@
-import React from "react";
-import { SwiperSlide, Swiper } from "swiper/react";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
-import { Navigation, Autoplay, A11y, FreeMode } from "swiper/modules";
-import Image, { StaticImageData } from "next/image";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import Image from "next/image";
 
-interface Media {
-  type: "image" | "video";
-  src: string | StaticImageData;
-}
-
-export interface Data {
-  media: Media[];
-  left: string;
-  right: string;
-}
-
-export interface Props {
+interface SliderProps {
   title: string;
-  data: Data;
+  data: {
+    media: Array<{
+      src: any; // Using any for now since it's a Next.js Image import
+      type: string;
+    }>;
+    left: string;
+    right: string;
+  };
 }
 
-const Slider = ({ title, data }: Props) => {
+const Slider: React.FC<SliderProps> = ({ title, data }) => {
+  const [activeSlide, setActiveSlide] = useState(0);
+
   return (
-    <div className="flex slider flex-col gap-10">
-      <h2
-        className="text-3xl md:text-5xl lg:text-7xl"
-        dangerouslySetInnerHTML={{ __html: title }}
-      />
-      <Swiper
-        spaceBetween={-80}
-        slidesPerView="auto"
-        modules={[Navigation, FreeMode, Autoplay, A11y]}
-        loop
-        centeredSlides
-        freeMode
-        autoplay={{
-          delay: 1000,
-          disableOnInteraction: false,
-        }}
-        slideToClickedSlide
-      >
-        {data.media.map((media, index) => (
-          <SwiperSlide className="max-w-fit" key={index}>
-            <Image
-              className="w-[350px] sm:w-[500px] md:w-[800px] lg:w-[991px]"
-              src={media.src}
-              alt={title}
+    <div className="w-full max-w-6xl mx-auto">
+      <h3 className="text-3xl font-serif mb-8">{title}</h3>
+      <div className="relative">
+        {/* Navigation Buttons */}
+        <button
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-all"
+          onClick={() => setActiveSlide((prev) => (prev > 0 ? prev - 1 : data.media.length - 1))}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15.75 19.5L8.25 12l7.5-7.5"
             />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <div className="flex flex-col md:flex-row gap-8 md:gap-10 font-medium">
+          </svg>
+        </button>
+        <button
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-all"
+          onClick={() => setActiveSlide((prev) => (prev < data.media.length - 1 ? prev + 1 : 0))}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </button>
+
+        {/* Main Slider */}
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={0}
+          slidesPerView={1}
+          onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex)}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          className="w-full aspect-video rounded-lg overflow-hidden"
+        >
+          {data.media.map((media, index) => (
+            <SwiperSlide key={index}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3 }}
+                className="w-full h-full"
+              >
+                {media.type === "image" && (
+                  <img
+                    src={media.src.src}
+                    alt={`${title} - Slide ${index + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                )}
+              </motion.div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* Pagination Dots */}
+        <div className="flex justify-center gap-2 mt-4">
+          {data.media.map((_, index) => (
+            <button
+              key={index}
+              className={`w-2 h-2 rounded-full transition-all ${
+                index === activeSlide ? "bg-black w-4" : "bg-gray-300"
+              }`}
+              onClick={() => setActiveSlide(index)}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Content Section */}
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div
-          className="md:min-w-[300px]"
+          className="prose prose-sm max-w-none"
           dangerouslySetInnerHTML={{ __html: data.left }}
         />
-        <div className="" dangerouslySetInnerHTML={{ __html: data.right }} />
+        <div
+          className="prose prose-sm max-w-none"
+          dangerouslySetInnerHTML={{ __html: data.right }}
+        />
       </div>
     </div>
   );
