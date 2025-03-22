@@ -21,8 +21,8 @@ export default function Home() {
       <Hero />
       
       {/* Education Section */}
-      <section className="py-24 bg-gradient-to-b from-black via-[#050505] to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]"></div>
+      <section className="py-24 bg-gradient-to-b from-black via-[#020202] to-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-[0.015]"></div>
         <div className="container mx-auto px-4 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -62,16 +62,16 @@ export default function Home() {
       </section>
       
       {/* Technologies Section */}
-      <section id="technologies" className="bg-gradient-to-b from-[#050505] to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-dots-pattern opacity-[0.02]"></div>
+      <section id="technologies" className="bg-gradient-to-b from-black via-[#020202] to-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-dots-pattern opacity-[0.015]"></div>
         <div className="relative">
           <GridList content={technologies} />
         </div>
       </section>
       
       {/* Work Section */}
-      <section className="py-24 bg-gradient-to-b from-black via-[#050505] to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]"></div>
+      <section className="py-24 bg-gradient-to-b from-black via-[#020202] to-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-[0.015]"></div>
         <div className="container mx-auto px-4 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -111,8 +111,8 @@ export default function Home() {
       </section>
       
       {/* Projects Section */}
-      <section className="py-24 bg-gradient-to-b from-[#050505] to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]"></div>
+      <section className="py-24 bg-gradient-to-b from-black via-[#020202] to-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-[0.015]"></div>
         <div className="container mx-auto px-4 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -146,35 +146,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-24 bg-gradient-to-b from-black to-[#050505] relative overflow-hidden">
-        <div className="absolute inset-0 bg-dots-pattern opacity-[0.02]"></div>
-        <div className="container mx-auto px-4 relative">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="max-w-5xl mx-auto"
-          >
-            <h2 className="text-4xl md:text-5xl font-serif mb-12 text-center text-white">About Me</h2>
-            <div className="space-y-6 text-lg leading-relaxed text-gray-300">
-              <p>
-                I&apos;m a passionate software engineer with a keen interest in cloud infrastructure and human-computer interaction. 
-                My journey in technology is driven by a desire to create innovative solutions that make a difference.
-              </p>
-              <p>
-                With a strong foundation in software development and a focus on modern technologies, 
-                I strive to build scalable and user-friendly applications that solve real-world problems.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Focus Areas Section */}
-      <section id="focus-areas" className="py-24 bg-gradient-to-b from-[#050505] to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]"></div>
+      <section id="focus-areas" className="py-24 bg-gradient-to-b from-black via-[#020202] to-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-[0.015]"></div>
         <div className="container mx-auto px-4 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -199,8 +173,8 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-gradient-to-b from-black to-[#050505] relative overflow-hidden">
-        <div className="absolute inset-0 bg-dots-pattern opacity-[0.02]"></div>
+      <section id="contact" className="py-24 bg-gradient-to-b from-black via-[#020202] to-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-dots-pattern opacity-[0.015]"></div>
         <div className="container mx-auto px-4 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
