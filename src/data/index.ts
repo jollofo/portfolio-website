@@ -16,13 +16,6 @@ import g2 from "../../public/images/golazo_2.png";
 import g3 from "../../public/images/golazo_3.png";
 import g4 from "../../public/images/golazo_4.png";
 
-export const facts = [
-  "I was born and raised in Nairobi, Kenya.",
-  "I enjoy reading, playing video games, being outside and being active.",
-  "I am super interested in philosophy, specifically ethics. Highly recommend Letter from a Stoic by Seneca.",
-  "My favorite book is 1984 by George Orwell. ",
-];
-
 export const education = [
   {
     title: "University of Rochester",
@@ -49,7 +42,7 @@ export const work = [
     title: "Intern - Acting Globally",
     date: "Sep 2023 - Aug 2024",
     paragraph:
-      "I was part of a four-person team developing new tools for volunteers and community organizations.",
+      "Acting Globally works to connect volunteers with grassroots groups around the world. I collaborated with a team of four developers to create innovative tools for these volunteers and grassroots organizations including dynamic signup sheets and project dashboards. I also aided in building the front-end using React.js and Next.js and engineering a back-end system using MongoDB and Node.js that optimized data maintenance and retrieval processes"
   },
   {
     title: "Web Developer - University of Rochester",
@@ -64,10 +57,10 @@ export const work = [
       "SEO Tech Developer is a remote tech training course that I had the opportunity to participate in. I immersed myself in a comprehensive prep program, accruing over 300 hours of training and creating web applications that leverage a broad range of technologies. ",
   },
   {
-    title: "IT Consultant - University of Rochester",
+    title: "IT Consultant (Team Lead) - Simon Business School",
     date: "May 2021 - Present",
     paragraph:
-      "I provide IT consultancy at the Simon Business School, where I boast help in resolving various tech issues and have supported a number of professors to navigate online platforms smoothly.",
+      "At the Simon Business School, I have helped resolve various software installation issues, network connectivity problems, and hardware complications. I engineered a Python program to automatically verify Zoom account settings and developed a script to automate the adding and removing of 500+ students from various Slack spaces using Slack's API.",
   },
 ];
 

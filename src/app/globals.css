@@ -107,24 +107,6 @@ body {
   font-family: sketchFont;
 }
 
-.swiper-slide {
-  background-color: #ccc;
-  opacity: 0.2;
-  transition: opacity 0.7s linear !important;
-  cursor: grab;
-}
-
-.swiper-slide-active {
-  opacity: 1;
-  cursor: grab;
-  transform: scale(1);
-}
-
-.swiper-slide-dragging {
-  cursor: grabbing;
-  transform: scaleX(1.08);
-}
-
 main a,
 main strong {
   color: slateblue;
@@ -199,61 +181,68 @@ span a:hover::after {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #444;
+  background: #555;
 }
 
-/* Animations */
 @-webkit-keyframes bg-scrolling-reverse {
   100% {
     background-position: 50px 50px;
   }
 }
+
 @-moz-keyframes bg-scrolling-reverse {
   100% {
     background-position: 50px 50px;
   }
 }
+
 @-o-keyframes bg-scrolling-reverse {
   100% {
     background-position: 50px 50px;
   }
 }
+
 @keyframes bg-scrolling-reverse {
   100% {
     background-position: 50px 50px;
   }
 }
+
 @-webkit-keyframes bg-scrolling {
   0% {
     background-position: 50px 50px;
   }
 }
+
 @-moz-keyframes bg-scrolling {
   0% {
     background-position: 50px 50px;
   }
 }
+
 @-o-keyframes bg-scrolling {
   0% {
     background-position: 50px 50px;
   }
 }
+
 @keyframes bg-scrolling {
   0% {
     background-position: 50px 50px;
   }
 }
 
-/* Background Patterns */
 .bg-grid-pattern {
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 24px 24px;
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: bg-scrolling 0.5s linear infinite;
 }
 
 .bg-dots-pattern {
   background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 24px 24px;
+  background-size: 50px 50px;
+  animation: bg-scrolling 0.5s linear infinite;
 }
 
 /* Main styles */

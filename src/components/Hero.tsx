@@ -1,7 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const Hero = () => {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black via-[#050505] to-black relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]"></div>
@@ -26,12 +35,14 @@ const Hero = () => {
           >
             <a
               href="#projects"
+              onClick={(e) => handleScroll(e, 'projects')}
               className="text-lg text-white hover:text-blue-400 transition-colors"
             >
               View Projects
             </a>
             <a
               href="#contact"
+              onClick={(e) => handleScroll(e, 'contact')}
               className="text-lg text-white hover:text-blue-400 transition-colors"
             >
               Get in Touch

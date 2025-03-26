@@ -1,29 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+const MENU_ITEMS = [
+  { label: 'Education', href: '#education' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Focus Areas', href: '#focus-areas' },
+  { label: 'Contact', href: '#contact' },
+] as const;
+
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
+    document.body.style.overflow = isOpen ? 'hidden' : 'unset';
     return () => {
       document.body.style.overflow = 'unset';
     };
   }, [isOpen]);
 
-  const menuItems = [
-    { label: 'Education', href: '#education' },
-    { label: 'Technologies', href: '#technologies' },
-    { label: 'Work', href: '#work' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'About', href: '#about' },
-    { label: 'Focus Areas', href: '#focus-areas' },
-    { label: 'Contact', href: '#contact' },
-  ];
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsOpen(false);
+    }
+  };
 
   return (
     <>
@@ -45,22 +47,23 @@ const Menu = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
             className="menu-overlay active"
           >
             <nav className="h-full flex items-center justify-center">
               <ul className="text-center space-y-8">
-                {menuItems.map((item, index) => (
+                {MENU_ITEMS.map((item, index) => (
                   <motion.li
                     key={item.href}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 20 }}
-                    transition={{ delay: index * 0.1 }}
+                    transition={{ duration: 0.2, delay: index * 0.1 }}
                     className="text-2xl"
                   >
                     <a
                       href={item.href}
-                      onClick={() => setIsOpen(false)}
+                      onClick={(e) => handleScroll(e, item.href.substring(1))}
                       className="hover:opacity-70 transition-opacity"
                     >
                       {item.label}

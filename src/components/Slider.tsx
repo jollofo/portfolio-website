@@ -1,18 +1,12 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import Image from "next/image";
 
 export interface SliderProps {
   title: string;
   data: {
     media: Array<{
-      src: any; // Using any for now since it's a Next.js Image import
-      type: string;
+      src: { src: string };
+      type: "image";
     }>;
     left: string;
     right: string;
@@ -67,39 +61,28 @@ const Slider: React.FC<SliderProps> = ({ title, data }) => {
         </button>
 
         {/* Main Slider */}
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={0}
-          slidesPerView={1}
-          onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex)}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-          className="w-full aspect-video rounded-lg overflow-hidden"
-        >
-          {data.media.map((media, index) => (
-            <SwiperSlide key={index}>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3 }}
-                className="w-full h-full"
-              >
-                {media.type === "image" && (
-                  <img
-                    src={media.src.src}
-                    alt={`${title} - Slide ${index + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                )}
-              </motion.div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div className="w-full aspect-video rounded-lg overflow-hidden">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeSlide}
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -100 }}
+              transition={{ duration: 0.3 }}
+              className="w-full h-full"
+            >
+              {data.media[activeSlide].type === "image" && (
+                <img
+                  src={data.media[activeSlide].src.src}
+                  alt={`${title} - Slide ${activeSlide + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              )}
+            </motion.div>
+          </AnimatePresence>
+        </div>
 
-        {/* Pagination Dots */}
+        {/* Dots Navigation */}
         <div className="flex justify-center gap-2 mt-4">
           {data.media.map((_, index) => (
             <button
