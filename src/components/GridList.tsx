@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 interface GridListProps {
   content: Array<{
@@ -9,7 +10,6 @@ interface GridListProps {
 }
 
 const GridList: React.FC<GridListProps> = ({ content }) => {
-  // List of technologies that should keep their original colors
   const coloredIcons = [
     'JavaScript',
     'TypeScript',
@@ -46,17 +46,12 @@ const GridList: React.FC<GridListProps> = ({ content }) => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group flex flex-col items-center justify-center p-6 rounded-lg bg-[#050505] hover:bg-[#0a0a0a] transition-colors duration-300"
               >
-                <div className="w-16 h-16 mb-4 flex items-center justify-center bg-[#0a0a0a] rounded-lg">
-                  <img
+                <div className="relative h-48 w-full">
+                  <Image
                     src={item.src}
                     alt={item.title}
-                    className={`w-12 h-12 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300 ${
-                      coloredIcons.includes(item.title) ? '' : 'filter brightness-0 invert'
-                    }`}
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                    }}
+                    fill
+                    className="object-cover rounded-lg"
                   />
                 </div>
                 <span className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">

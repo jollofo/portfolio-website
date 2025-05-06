@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from 'next/image';
 
 export interface SliderProps {
   title: string;
@@ -72,11 +73,14 @@ const Slider: React.FC<SliderProps> = ({ title, data }) => {
               className="w-full h-full"
             >
               {data.media[activeSlide].type === "image" && (
-                <img
-                  src={data.media[activeSlide].src.src}
-                  alt={`${title} - Slide ${activeSlide + 1}`}
-                  className="w-full h-full object-cover"
-                />
+                <div className="relative h-64 w-full">
+                  <Image
+                    src={data.media[activeSlide].src.src}
+                    alt={`${title} - Slide ${activeSlide + 1}`}
+                    fill
+                    className="object-cover rounded-lg"
+                  />
+                </div>
               )}
             </motion.div>
           </AnimatePresence>

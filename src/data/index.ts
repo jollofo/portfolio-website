@@ -15,7 +15,6 @@ import g1 from "../../public/images/golazo_1.png";
 import g2 from "../../public/images/golazo_2.png";
 import g3 from "../../public/images/golazo_3.png";
 import g4 from "../../public/images/golazo_4.png";
-import { getBlogPosts } from './blogService';
 
 export const education = [
   {
@@ -54,7 +53,7 @@ export const work = [
   {
     title: "Tech Developer Intern - SEO Career",
     date: "Jun 2022 - May 2023",
-    paragraph:
+    paragraph: 
       "SEO Tech Developer is a remote tech training course that I had the opportunity to participate in. I immersed myself in a comprehensive prep program, accruing over 300 hours of training and creating web applications that leverage a broad range of technologies. ",
   },
   {
@@ -253,7 +252,3 @@ export const projects: SliderProps[] = [
     },
   },
 ];
-
-export const getRecentBlogs = async () => {
-  return await getBlogPosts(3); // Get 3 most recent blog posts
-};

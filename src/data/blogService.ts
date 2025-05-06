@@ -12,29 +12,29 @@ const blogApi = axios.create({
 });
 
 export interface BlogPost {
-  id: string;
-  title: string;
-  content: string;
-  author: string;
-  publishedAt: string;
-  imageUrl?: string;
+  urn: string;
+  postUrl: string;
+  postedAt: string;
+  text: string;
+  likeCount: number;
+  shareUrl: string;
 }
 
 export const getBlogPosts = async (limit: number = 3): Promise<BlogPost[]> => {
   try {
-    const response = await blogApi.get('/blog-posts', {
+    const response = await blogApi.get('/get-profile-posts?username=jamesmuguiyi', {
       params: { limit },
     });
-    return response.data;
+    return response.data.data;
   } catch (error) {
     console.error('Error fetching blog posts:', error);
     return [];
   }
 };
 
-export const getBlogPostById = async (id: string): Promise<BlogPost | null> => {
+export const getBlogPostByURL = async (url: string): Promise<BlogPost | null> => {
   try {
-    const response = await blogApi.get(`/blog-posts/${id}`);
+    const response = await blogApi.get(`/get-post?url=${url}`);
     return response.data;
   } catch (error) {
     console.error('Error fetching blog post:', error);

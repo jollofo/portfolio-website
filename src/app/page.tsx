@@ -1,19 +1,15 @@
 "use client";
-import React from 'react';
-import Menu from '@/components/Menu';
-import Hero from '@/components/Hero';
+import React, { useState, useEffect } from "react";
+import Menu from "@/components/Menu";
+import Hero from "@/components/Hero";
 import GridList from "@/components/GridList";
 import Slider from "@/components/Slider";
-import {
-  education,
-  work,
-  technologies,
-  projects,
-  getRecentBlogs,
-} from "@/data";
-import { motion } from 'framer-motion';
-import BlogCard from '@/components/BlogCard';
-import { BlogPost } from '@/data/blogService';
+import { education, work, technologies, projects } from "@/data";
+import { getBlogPosts } from "@/data/blogService";
+import { motion } from "framer-motion";
+import BlogCard from "@/components/BlogCard";
+import { BlogPost } from "@/data/blogService";
+import Link from "next/link";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -24,8 +20,17 @@ const sectionTransition = {
   duration: 0.3,
 };
 
-const SectionWrapper = ({ children, id }: { children: React.ReactNode; id: string }) => (
-  <section id={id} className="py-24 bg-gradient-to-b from-black via-[#020202] to-black relative overflow-hidden">
+const SectionWrapper = ({
+  children,
+  id,
+}: {
+  children: React.ReactNode;
+  id: string;
+}) => (
+  <section
+    id={id}
+    className="py-24 bg-gradient-to-b from-black via-[#020202] to-black relative overflow-hidden"
+  >
     <div className="absolute inset-0 bg-grid-pattern opacity-[0.015]"></div>
     <div className="container mx-auto px-4 relative">
       <motion.div
@@ -42,17 +47,36 @@ const SectionWrapper = ({ children, id }: { children: React.ReactNode; id: strin
   </section>
 );
 
-export default async function Home() {
-  const blogs: BlogPost[] = await getRecentBlogs();
+export default function Home() {
+  const [blogs, setBlogs] = useState<BlogPost[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const fetchedBlogs = await getBlogPosts();
+        console.log(fetchedBlogs);
+        setBlogs(fetchedBlogs || []);
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+        setBlogs([]);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchBlogs();
+  }, []);
 
   return (
     <main className="min-h-screen bg-black">
       <Menu />
       <Hero />
-      
+
       {/* Education Section */}
       <SectionWrapper id="education">
-        <h2 className="text-4xl md:text-5xl font-serif mb-12 text-center text-white">Education</h2>
+        <h2 className="text-4xl md:text-5xl font-serif mb-12 text-center text-white">
+          Education
+        </h2>
         <div className="space-y-16">
           {education.map((edu, index) => (
             <motion.div
@@ -66,11 +90,15 @@ export default async function Home() {
             >
               <div className="flex flex-col md:flex-row gap-8">
                 <div className="md:w-1/3">
-                  <h3 className="text-2xl font-serif mb-2 text-white">{edu.title}</h3>
+                  <h3 className="text-2xl font-serif mb-2 text-white">
+                    {edu.title}
+                  </h3>
                   <p className="text-gray-400">{edu.date}</p>
                 </div>
                 <div className="md:w-2/3">
-                  <p className="text-gray-300 leading-relaxed">{edu.paragraph}</p>
+                  <p className="text-gray-300 leading-relaxed">
+                    {edu.paragraph}
+                  </p>
                 </div>
               </div>
               {index < education.length - 1 && (
@@ -80,18 +108,23 @@ export default async function Home() {
           ))}
         </div>
       </SectionWrapper>
-      
+
       {/* Technologies Section */}
-      <section id="technologies" className="bg-gradient-to-b from-black via-[#020202] to-black relative overflow-hidden">
+      <section
+        id="technologies"
+        className="bg-gradient-to-b from-black via-[#020202] to-black relative overflow-hidden"
+      >
         <div className="absolute inset-0 bg-dots-pattern opacity-[0.015]"></div>
         <div className="relative">
           <GridList content={technologies} />
         </div>
       </section>
-      
+
       {/* Work Section */}
       <SectionWrapper id="work">
-        <h2 className="text-4xl md:text-5xl font-serif mb-12 text-center text-white">Work Experience</h2>
+        <h2 className="text-4xl md:text-5xl font-serif mb-12 text-center text-white">
+          Work Experience
+        </h2>
         <div className="space-y-16">
           {work.map((job, index) => (
             <motion.div
@@ -105,11 +138,15 @@ export default async function Home() {
             >
               <div className="flex flex-col md:flex-row gap-8">
                 <div className="md:w-1/3">
-                  <h3 className="text-2xl font-serif mb-2 text-white">{job.title}</h3>
+                  <h3 className="text-2xl font-serif mb-2 text-white">
+                    {job.title}
+                  </h3>
                   <p className="text-gray-400">{job.date}</p>
                 </div>
                 <div className="md:w-2/3">
-                  <p className="text-gray-300 leading-relaxed">{job.paragraph}</p>
+                  <p className="text-gray-300 leading-relaxed">
+                    {job.paragraph}
+                  </p>
                 </div>
               </div>
               {index < work.length - 1 && (
@@ -119,10 +156,12 @@ export default async function Home() {
           ))}
         </div>
       </SectionWrapper>
-      
+
       {/* Projects Section */}
       <SectionWrapper id="projects">
-        <h2 className="text-4xl md:text-5xl font-serif mb-12 text-center text-white">Projects</h2>
+        <h2 className="text-4xl md:text-5xl font-serif mb-12 text-center text-white">
+          Projects
+        </h2>
         <div className="space-y-24">
           {projects.map((project, index) => (
             <motion.div
@@ -133,50 +172,72 @@ export default async function Home() {
               variants={sectionVariants}
               transition={{ ...sectionTransition, delay: index * 0.2 }}
             >
-              <Slider
-                title={project.title}
-                data={project.data}
-              />
+              <Slider title={project.title} data={project.data} />
             </motion.div>
           ))}
-        </div>
-      </SectionWrapper>
-
-      {/* Focus Areas Section */}
-      <SectionWrapper id="focus-areas">
-        <h2 className="text-4xl md:text-5xl font-serif mb-16 text-center text-white">Focus Areas</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="space-y-4">
-            <h3 className="text-2xl md:text-3xl font-serif text-white">Cloud Infrastructure</h3>
-            <p className="text-lg text-gray-300">Designing and implementing scalable cloud solutions using modern technologies and best practices.</p>
-          </div>
-          <div className="space-y-4">
-            <h3 className="text-2xl md:text-3xl font-serif text-white">Human-Computer Interaction</h3>
-            <p className="text-lg text-gray-300">Creating intuitive and accessible user interfaces that enhance the human experience with technology.</p>
-          </div>
         </div>
       </SectionWrapper>
 
       {/* Recent Blogs Section */}
       <SectionWrapper id="recent-blogs">
         <div className="flex justify-between items-center mb-8">
-          <h2 className="text-4xl md:text-5xl font-serif text-white">Recent Blog Posts</h2>
-          <a
+          <h2 className="text-4xl md:text-5xl font-serif text-white">
+            Recent Posts
+          </h2>
+          <Link
             href="/blog"
             className="text-blue-400 hover:text-blue-300 transition-colors"
           >
             View All Posts →
-          </a>
+          </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogs.map((blog: BlogPost) => (
-            <BlogCard key={blog.id} blog={blog} />
-          ))}
+        {isLoading ? (
+          <div className="text-center text-gray-400">Loading blog posts...</div>
+        ) : blogs.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {blogs.map((blog: BlogPost) => (
+              <BlogCard key={blog.postUrl} blog={blog} />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center text-gray-400">
+            No blog posts available
+          </div>
+        )}
+      </SectionWrapper>
+
+      {/* Focus Areas Section */}
+      <SectionWrapper id="focus-areas">
+        <h2 className="text-4xl md:text-5xl font-serif mb-16 text-center text-white">
+          Focus Areas
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="space-y-4">
+            <h3 className="text-2xl md:text-3xl font-serif text-white">
+              Cloud Infrastructure
+            </h3>
+            <p className="text-lg text-gray-300">
+              Designing and implementing scalable cloud solutions using modern
+              technologies and best practices.
+            </p>
+          </div>
+          <div className="space-y-4">
+            <h3 className="text-2xl md:text-3xl font-serif text-white">
+              Human-Computer Interaction
+            </h3>
+            <p className="text-lg text-gray-300">
+              Creating intuitive and accessible user interfaces that enhance the
+              human experience with technology.
+            </p>
+          </div>
         </div>
       </SectionWrapper>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-gradient-to-b from-black via-[#020202] to-black relative overflow-hidden">
+      <section
+        id="contact"
+        className="py-24 bg-gradient-to-b from-black via-[#020202] to-black relative overflow-hidden"
+      >
         <div className="absolute inset-0 bg-dots-pattern opacity-[0.015]"></div>
         <div className="container mx-auto px-4 relative">
           <motion.div
@@ -187,7 +248,9 @@ export default async function Home() {
             transition={sectionTransition}
             className="max-w-2xl mx-auto text-center"
           >
-            <h2 className="text-4xl md:text-5xl mb-8 font-serif text-white">Get in Touch</h2>
+            <h2 className="text-4xl md:text-5xl mb-8 font-serif text-white">
+              Get in Touch
+            </h2>
             <p className="text-lg text-gray-300 mb-12">
               Interested in collaborating or learning more about my work?
             </p>
