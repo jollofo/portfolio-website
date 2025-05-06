@@ -9,8 +9,11 @@ import {
   work,
   technologies,
   projects,
+  getRecentBlogs,
 } from "@/data";
 import { motion } from 'framer-motion';
+import BlogCard from '@/components/BlogCard';
+import { BlogPost } from '@/data/blogService';
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -39,7 +42,9 @@ const SectionWrapper = ({ children, id }: { children: React.ReactNode; id: strin
   </section>
 );
 
-export default function Home() {
+export default async function Home() {
+  const blogs: BlogPost[] = await getRecentBlogs();
+
   return (
     <main className="min-h-screen bg-black">
       <Menu />
@@ -149,6 +154,24 @@ export default function Home() {
             <h3 className="text-2xl md:text-3xl font-serif text-white">Human-Computer Interaction</h3>
             <p className="text-lg text-gray-300">Creating intuitive and accessible user interfaces that enhance the human experience with technology.</p>
           </div>
+        </div>
+      </SectionWrapper>
+
+      {/* Recent Blogs Section */}
+      <SectionWrapper id="recent-blogs">
+        <div className="flex justify-between items-center mb-8">
+          <h2 className="text-4xl md:text-5xl font-serif text-white">Recent Blog Posts</h2>
+          <a
+            href="/blog"
+            className="text-blue-400 hover:text-blue-300 transition-colors"
+          >
+            View All Posts →
+          </a>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {blogs.map((blog: BlogPost) => (
+            <BlogCard key={blog.id} blog={blog} />
+          ))}
         </div>
       </SectionWrapper>
 

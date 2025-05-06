@@ -31,13 +31,25 @@ const Menu = () => {
     <>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-8 right-8 z-50 w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-lg"
-        aria-label="Menu"
+        className="fixed top-8 right-8 z-50 w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-lg hover:bg-gray-300 transition-colors"
+        aria-label={isOpen ? "Close menu" : "Open menu"}
       >
         <div className="w-6 h-6 flex flex-col justify-around">
-          <span className={`block w-full h-0.5 bg-black transform transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2.5' : ''}`} />
-          <span className={`block w-full h-0.5 bg-black transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`} />
-          <span className={`block w-full h-0.5 bg-black transform transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2.5' : ''}`} />
+          <span 
+            className={`block w-full h-0.5 bg-black transform transition-all duration-300 ${
+              isOpen ? 'rotate-45 translate-y-2.5' : ''
+            }`} 
+          />
+          <span 
+            className={`block w-full h-0.5 bg-black transition-all duration-300 ${
+              isOpen ? 'opacity-0' : ''
+            }`} 
+          />
+          <span 
+            className={`block w-full h-0.5 bg-black transform transition-all duration-300 ${
+              isOpen ? '-rotate-45 -translate-y-2.5' : ''
+            }`} 
+          />
         </div>
       </button>
 
@@ -48,7 +60,7 @@ const Menu = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="menu-overlay active"
+            className="fixed inset-0 bg-black z-40"
           >
             <nav className="h-full flex items-center justify-center">
               <ul className="text-center space-y-8">

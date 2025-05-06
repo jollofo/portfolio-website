@@ -104,7 +104,7 @@ const Slider: React.FC<SliderProps> = ({ title, data }) => {
           dangerouslySetInnerHTML={{ __html: data.left }}
         />
         <div
-          className="prose prose-sm max-w-none"
+          className="prose prose-sm max-w-none text-white"
           dangerouslySetInnerHTML={{ __html: data.right }}
         />
       </div>

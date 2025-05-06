@@ -15,6 +15,7 @@ import g1 from "../../public/images/golazo_1.png";
 import g2 from "../../public/images/golazo_2.png";
 import g3 from "../../public/images/golazo_3.png";
 import g4 from "../../public/images/golazo_4.png";
+import { getBlogPosts } from './blogService';
 
 export const education = [
   {
@@ -252,3 +253,7 @@ export const projects: SliderProps[] = [
     },
   },
 ];
+
+export const getRecentBlogs = async () => {
+  return await getBlogPosts(3); // Get 3 most recent blog posts
+};
