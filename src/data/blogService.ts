@@ -35,7 +35,7 @@ export const getBlogPosts = async (limit: number = 3): Promise<BlogPost[]> => {
 export const getBlogPostByURL = async (url: string): Promise<BlogPost | null> => {
   try {
     const response = await blogApi.get(`/get-post?url=${url}`);
-    return response.data;
+    return response.data.data;
   } catch (error) {
     console.error('Error fetching blog post:', error);
     return null;

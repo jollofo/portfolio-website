@@ -11,9 +11,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   const resolvedParams = await params;
   const blog = await getBlogPostByURL(
     `https://www.linkedin.com/feed/update/urn:li:activity:${resolvedParams.id}`
-  ).then((res) => {
-    return res?.data;
-  });
+  );
 
   if (!blog) {
     notFound();
