@@ -19,20 +19,20 @@ const Slider: React.FC<SliderProps> = ({ title, data }) => {
 
   return (
     <div className="w-full max-w-6xl mx-auto">
-      <h3 className="text-3xl font-serif mb-8">{title}</h3>
+      <h3 className="text-3xl font-serif mb-8 text-white">{title}</h3>
       <div className="relative">
         {/* Navigation Buttons */}
         <button
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-all"
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
           onClick={() => setActiveSlide((prev) => (prev > 0 ? prev - 1 : data.media.length - 1))}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            strokeWidth={1.5}
+            strokeWidth={2}
             stroke="currentColor"
-            className="w-6 h-6"
+            className="w-5 h-5 text-gray-800"
           >
             <path
               strokeLinecap="round"
@@ -42,16 +42,16 @@ const Slider: React.FC<SliderProps> = ({ title, data }) => {
           </svg>
         </button>
         <button
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-all"
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
           onClick={() => setActiveSlide((prev) => (prev < data.media.length - 1 ? prev + 1 : 0))}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            strokeWidth={1.5}
+            strokeWidth={2}
             stroke="currentColor"
-            className="w-6 h-6"
+            className="w-5 h-5 text-gray-800"
           >
             <path
               strokeLinecap="round"
@@ -62,7 +62,7 @@ const Slider: React.FC<SliderProps> = ({ title, data }) => {
         </button>
 
         {/* Main Slider */}
-        <div className="w-full aspect-video rounded-lg overflow-hidden">
+        <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeSlide}
@@ -73,12 +73,13 @@ const Slider: React.FC<SliderProps> = ({ title, data }) => {
               className="w-full h-full"
             >
               {data.media[activeSlide].type === "image" && (
-                <div className="relative h-64 w-full">
+                <div className="relative w-full h-full">
                   <Image
                     src={data.media[activeSlide].src.src}
                     alt={`${title} - Slide ${activeSlide + 1}`}
                     fill
-                    className="object-cover rounded-lg"
+                    className="object-contain rounded-lg"
+                    priority={activeSlide === 0}
                   />
                 </div>
               )}
@@ -87,12 +88,12 @@ const Slider: React.FC<SliderProps> = ({ title, data }) => {
         </div>
 
         {/* Dots Navigation */}
-        <div className="flex justify-center gap-2 mt-4">
+        <div className="flex justify-center gap-2 mt-6">
           {data.media.map((_, index) => (
             <button
               key={index}
               className={`w-2 h-2 rounded-full transition-all ${
-                index === activeSlide ? "bg-black w-4" : "bg-gray-300"
+                index === activeSlide ? "bg-white w-4" : "bg-gray-500 hover:bg-gray-400"
               }`}
               onClick={() => setActiveSlide(index)}
               aria-label={`Go to slide ${index + 1}`}
@@ -102,13 +103,13 @@ const Slider: React.FC<SliderProps> = ({ title, data }) => {
       </div>
 
       {/* Content Section */}
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div
-          className="prose prose-sm max-w-none"
+          className="prose prose-sm prose-invert max-w-none text-gray-300"
           dangerouslySetInnerHTML={{ __html: data.left }}
         />
         <div
-          className="prose prose-sm max-w-none text-white"
+          className="prose prose-sm prose-invert max-w-none text-gray-300"
           dangerouslySetInnerHTML={{ __html: data.right }}
         />
       </div>
