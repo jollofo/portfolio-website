@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from 'next/image';
+import Image from "next/image";
 
 export interface SliderProps {
   title: string;
@@ -24,7 +24,11 @@ const Slider: React.FC<SliderProps> = ({ title, data }) => {
         {/* Navigation Buttons */}
         <button
           className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
-          onClick={() => setActiveSlide((prev) => (prev > 0 ? prev - 1 : data.media.length - 1))}
+          onClick={() =>
+            setActiveSlide((prev) =>
+              prev > 0 ? prev - 1 : data.media.length - 1
+            )
+          }
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +47,11 @@ const Slider: React.FC<SliderProps> = ({ title, data }) => {
         </button>
         <button
           className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
-          onClick={() => setActiveSlide((prev) => (prev < data.media.length - 1 ? prev + 1 : 0))}
+          onClick={() =>
+            setActiveSlide((prev) =>
+              prev < data.media.length - 1 ? prev + 1 : 0
+            )
+          }
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +101,9 @@ const Slider: React.FC<SliderProps> = ({ title, data }) => {
             <button
               key={index}
               className={`w-2 h-2 rounded-full transition-all ${
-                index === activeSlide ? "bg-white w-4" : "bg-gray-500 hover:bg-gray-400"
+                index === activeSlide
+                  ? "bg-white w-4"
+                  : "bg-gray-500 hover:bg-gray-400"
               }`}
               onClick={() => setActiveSlide(index)}
               aria-label={`Go to slide ${index + 1}`}
@@ -105,11 +115,11 @@ const Slider: React.FC<SliderProps> = ({ title, data }) => {
       {/* Content Section */}
       <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div
-          className="prose prose-sm prose-invert max-w-none text-gray-300"
+          className="prose prose-sm prose-invert max-w-none text-gray-300 text-left"
           dangerouslySetInnerHTML={{ __html: data.left }}
         />
         <div
-          className="prose prose-sm prose-invert max-w-none text-gray-300"
+          className="prose prose-sm prose-invert max-w-none text-gray-300 text-left"
           dangerouslySetInnerHTML={{ __html: data.right }}
         />
       </div>
