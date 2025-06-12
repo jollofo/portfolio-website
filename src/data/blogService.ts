@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const RAPID_API_KEY = process.env.NEXT_PUBLIC_RAPID_API_KEY;
+const RAPID_API_KEY = process.env.RAPID_API_KEY;
 const RAPID_API_HOST = "linkedin-data-api.p.rapidapi.com";
 
 const blogApi = axios.create({
