@@ -20,13 +20,10 @@ export interface BlogPost {
   shareUrl: string;
 }
 
-export const getBlogPosts = async (limit: number = 3): Promise<BlogPost[]> => {
+export const getBlogPosts = async (): Promise<BlogPost[]> => {
   try {
     const response = await blogApi.get(
-      "/get-profile-posts?username=jamesmuguiyi",
-      {
-        params: { limit },
-      }
+      "get-profile-posts?username=jamesmuguiyi",
     );
     return response.data.data;
   } catch (error) {
