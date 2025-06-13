@@ -1,13 +1,14 @@
 import axios from "axios";
 
-const RAPID_API_KEY = process.env.RAPID_API_KEY;
+// API credentials (replace with your actual key or use environment variables)
+const RAPID_API_KEY = process.env.NEXT_PUBLIC_RAPID_API_KEY;
 const RAPID_API_HOST = "linkedin-data-api.p.rapidapi.com";
 
+// Create an axios instance with default headers
 const blogApi = axios.create({
-  baseURL: "https://linkedin-data-api.p.rapidapi.com",
   headers: {
-    "X-RapidAPI-Key": RAPID_API_KEY,
-    "X-RapidAPI-Host": RAPID_API_HOST,
+    "x-rapidapi-key": RAPID_API_KEY,
+    "x-rapidapi-host": RAPID_API_HOST,
   },
 });
 
@@ -20,10 +21,11 @@ export interface BlogPost {
   shareUrl: string;
 }
 
+// Fetches blog posts for a specific LinkedIn username
 export const getBlogPosts = async (): Promise<BlogPost[]> => {
   try {
     const response = await blogApi.get(
-      "get-profile-posts?username=jamesmuguiyi",
+      "https://linkedin-data-api.p.rapidapi.com/get-profile-posts?username=jamesmuguiyi"
     );
     return response.data.data;
   } catch (error) {
@@ -32,11 +34,14 @@ export const getBlogPosts = async (): Promise<BlogPost[]> => {
   }
 };
 
+// Fetches a single blog post by its URL
 export const getBlogPostByURL = async (
   url: string
 ): Promise<BlogPost | null> => {
   try {
-    const response = await blogApi.get(`/get-post?url=${url}`);
+    const response = await blogApi.get(
+      `https://linkedin-data-api.p.rapidapi.com/get-post?url=${encodeURIComponent(url)}`
+    );
     return response.data.data;
   } catch (error) {
     console.error("Error fetching blog post:", error);

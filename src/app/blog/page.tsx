@@ -2,7 +2,7 @@ import { getBlogPosts } from '@/data/blogService';
 import BlogCard from '@/components/BlogCard';
 
 export default async function BlogPage() {
-  const blogs = await getBlogPosts(100); // Fetch all posts
+  const blogs = await getBlogPosts(); // Fetch all posts
 
   return (
     <div className="container mx-auto px-4 py-8">
