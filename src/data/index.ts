@@ -103,7 +103,7 @@ export const technologies = [
   },
   {
     title: "Tailwind CSS",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
   },
   {
     title: "Git",

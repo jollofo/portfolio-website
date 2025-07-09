@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Menu from "@/components/Menu";
+import Dock from "@/components/Dock";
 import Hero from "@/components/Hero";
 import GridList from "@/components/GridList";
 import Slider from "@/components/Slider";
@@ -69,7 +69,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-black">
-      <Menu />
+      <Dock />
       <Hero />
 
       {/* Education Section */}
