@@ -18,6 +18,11 @@ import g4 from "../../public/images/golazo_4.png";
 
 export const education = [
   {
+    title: "Simon Business School",
+    date: "2025-2026",
+    paragraph: "I am pursuing a Master of Science in AI in Business at the Simon Business School. The program focuses on data analysis, statistical modeling, and artificial intelligence to equip students with the skills needed to make data-driven decisions in a business context.",
+  },
+  {
     title: "University of Rochester",
     date: "2020-2025",
     paragraph:
