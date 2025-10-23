@@ -15,18 +15,22 @@ import g1 from "../../public/images/golazo_1.png";
 import g2 from "../../public/images/golazo_2.png";
 import g3 from "../../public/images/golazo_3.png";
 import g4 from "../../public/images/golazo_4.png";
+import d1 from "../../public/images/dia-1.png";
+import d2 from "../../public/images/dia-2.png";
+import d3 from "../../public/images/dia-3.png";
+import { title } from "process";
 
 export const education = [
   {
     title: "Simon Business School",
     date: "2025-2026",
-    paragraph: "I am pursuing a Master of Science in AI in Business at the Simon Business School. The program focuses on data analysis, statistical modeling, and artificial intelligence to equip students with the skills needed to make data-driven decisions in a business context.",
+    paragraph: "I am currently pursuing a Master of Science in AI in Business at the Simon Business School. The program focuses on data analysis, statistical modeling, and artificial intelligence to equip students with the skills needed to make data-driven decisions in a business context.",
   },
   {
     title: "University of Rochester",
     date: "2020-2025",
     paragraph:
-      "I am in my Senior year studying Computer Science with a minor in Psychology. Outside of school, I am part of organizations such as the Pan-African Students Association and NSBE. I am also the Publicity Chair for the University of Rochester Christian Fellowship.",
+      "I graduated with a BA in Computer Science with a minor in Psychology. I focused on Computer Vision, Machine Learning, and Human-Computer Interaction courses while also exploring various interdisciplinary subjects through my psychology minor.",
   },
   {
     title: "African Leadership Academy",
@@ -37,6 +41,24 @@ export const education = [
 ];
 
 export const work = [
+  {
+    title: "Simon Vision Consulting - Simon Business School",
+    date: "May 2025 - Present",
+    paragraph:
+      "Simon Vision Consulting is the student-run consulting organization at the Simon Business School. As a consultant, I work with a local company (Taichi Bubble Tea) to provide data-driven solutions to real-world business problems for our clients. We utilize various analytical tools and techniques to deliver actionable insights that drive business growth and efficiency.",
+  },
+  {
+    title: "Lead Developer - Kuba AI",
+    date: "Mar 2025 - Present",
+    paragraph:
+      "Kuba AI is an innovative startup focused on developing AI-powered solutions to enhance productivity and streamline workflows. As the Lead Developer, I oversee the technical development of our products, manage a team of developers, and ensure that our solutions meet the highest standards of quality and performance.",
+  },
+  {
+    title: "HCI Research Assistant - University of Rochester",
+    date: "Sep 2024 - May 2025",
+    paragraph:
+      "As a Human-Computer Interaction Research Assistant, I was involved in exploring the design and use of computer technology, focusing particularly on the interfaces between people (users) and computers. My work included conducting user studies, analyzing data, and contributing to the development of user-centered design solutions.",
+  },
   {
     title: "Online Instructor - iD Tech",
     date: "Dec 2023 - May 2024",
@@ -51,7 +73,7 @@ export const work = [
   },
   {
     title: "Web Developer - University of Rochester",
-    date: "Oct 2022 - Present",
+    date: "Oct 2022 - Aug 2023",
     paragraph:
       "As a Web Developer, I mainly update our University IT's logistics web application. I've spearheaded the integration of Google APIs, to help streamline schedule management for the university community. ",
   },
@@ -63,7 +85,7 @@ export const work = [
   },
   {
     title: "IT Consultant (Team Lead) - Simon Business School",
-    date: "May 2021 - Present",
+    date: "May 2021 - May 2025",
     paragraph:
       "At the Simon Business School, I have helped resolve various software installation issues, network connectivity problems, and hardware complications. I engineered a Python program to automatically verify Zoom account settings and developed a script to automate the adding and removing of 500+ students from various Slack spaces using Slack's API.",
   },
@@ -101,6 +123,16 @@ export const technologies = [
   {
     title: "HTML5",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+  },
+  {
+    title: "Go",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg",
+  },
+  {title: "SQL",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+  },
+  {title: "R",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg"
   },
   {
     title: "CSS3",
@@ -184,6 +216,28 @@ export const projects: SliderProps[] = [
       left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, Pickle, Numpy</p><strong>Other:</strong><br/>Firebase<br/><br/><span><a href="https://github.com/jollofo/face-detector" target="_blank" rel="noopener noreferrer">GITHUB LINK</a></span>',
       right:
         "<p>This project uses a live video stream to recognize your face and match it to the information in the database. If your data is in the database, it records your attendance. It contains 3 files: <strong>databaseManager.py</strong> holds the data that the program checks against and handles some of the firebase certificates. <strong>encoder.py</strong> encodes the image data in order to store it more efficiently. Lastly, <strong>main.py</strong> brings everything together. It contains the face tracking code and does the matching of information. If a match is found it upadtes the necessary information.</p>",
+    },
+  },
+  {
+    title: "AI Desktop Assistant",
+    data: {
+      media: [
+        {
+          src: d1,
+          type: "image",
+        },
+        {
+          src: d2,
+          type: "image", 
+        },
+        {
+          src: d3,
+          type: "image",
+        },
+      ],
+      left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>PyQt6, OpenCV, Tesseract OCR, PyAudio, SpeechRecognition</p><br /><span><a href="https://github.com/jollofo/dia-assistant" target="_blank" rel="noopener noreferrer">GITHUB LINK</a></span>',
+      right:
+        "<p>A multi-threaded PyQt6 application orchestrating real-time screen analysis, LLM integration, and UI overlay via signal/slot architecture. Implemented a hybrid screen-scanning pipeline combining perceptual hashing, OpenCV UI-element detection, and fallback analysis using LLaVA + Tesseract OCR for structured visual context. Built a streaming LLM orchestrator using locally hosted models with context aggregation from visual analysis; designed audio STT pipeline using PyAudio + SpeechRecognition.</p>",
     },
   },
   {
