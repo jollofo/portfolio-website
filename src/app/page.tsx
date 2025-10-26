@@ -206,33 +206,6 @@ export default function Home() {
         )}
       </SectionWrapper>
 
-      {/* Focus Areas Section */}
-      <SectionWrapper id="focus-areas">
-        <h2 className="text-4xl md:text-5xl font-serif mb-16 text-center text-white">
-          Focus Areas
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="space-y-4">
-            <h3 className="text-2xl md:text-3xl font-serif text-white">
-              Cloud Infrastructure
-            </h3>
-            <p className="text-lg text-gray-300">
-              Designing and implementing scalable cloud solutions using modern
-              technologies and best practices.
-            </p>
-          </div>
-          <div className="space-y-4">
-            <h3 className="text-2xl md:text-3xl font-serif text-white">
-              Human-Computer Interaction
-            </h3>
-            <p className="text-lg text-gray-300">
-              Creating intuitive and accessible user interfaces that enhance the
-              human experience with technology.
-            </p>
-          </div>
-        </div>
-      </SectionWrapper>
-
       {/* Contact Section */}
       <section
         id="contact"
