@@ -45,7 +45,7 @@ export const work = [
     title: "Simon Vision Consulting - Simon Business School",
     date: "May 2025 - Present",
     paragraph:
-      "Simon Vision Consulting is the student-run consulting organization at the Simon Business School. As a consultant, I work with a local company (Taichi Bubble Tea) to provide data-driven solutions to real-world business problems for our clients. We utilize various analytical tools and techniques to deliver actionable insights that drive business growth and efficiency.",
+      "Simon Vision Consulting is the student-run consulting organization at the Simon Business School. As a consultant, I work with a local company to provide data-driven solutions to real-world business problems for our clients. We utilize various analytical tools and techniques to deliver actionable insights that drive business growth and efficiency.",
   },
   {
     title: "Lead Developer - Kuba AI",
