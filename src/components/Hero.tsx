@@ -25,7 +25,7 @@ const Hero = () => {
             Hi, I&apos;m James
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            A Master's student in AI in Business with a passion for building innovative
+            A Master&apos;s student in AI in Business with a passion for building innovative
             software and systems.
           </p>
           <motion.div
