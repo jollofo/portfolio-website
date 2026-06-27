@@ -5,10 +5,7 @@ import Hero from "@/components/Hero";
 import GridList from "@/components/GridList";
 import Slider from "@/components/Slider";
 import { education, work, technologies, projects } from "@/data";
-import { getBlogPosts } from "@/data/blogService";
 import { motion } from "framer-motion";
-import BlogCard from "@/components/BlogCard";
-import { BlogPost } from "@/data/blogService";
 import Link from "next/link";
 
 const sectionVariants = {
@@ -48,25 +45,6 @@ const SectionWrapper = ({
 );
 
 export default function Home() {
-  const [blogs, setBlogs] = useState<BlogPost[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        const fetchedBlogs = await getBlogPosts();
-        console.log(fetchedBlogs);
-        setBlogs(fetchedBlogs || []);
-      } catch (error) {
-        console.error("Error fetching blogs:", error);
-        setBlogs([]);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    fetchBlogs();
-  }, []);
-
   return (
     <main className="min-h-screen bg-black">
       <Dock />
@@ -176,34 +154,6 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
-      </SectionWrapper>
-
-      {/* Recent Blogs Section */}
-      <SectionWrapper id="recent-blogs">
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-4xl md:text-5xl font-serif text-white">
-            Recent Posts
-          </h2>
-          <Link
-            href="/blog"
-            className="text-blue-400 hover:text-blue-300 transition-colors"
-          >
-            View All Posts →
-          </Link>
-        </div>
-        {isLoading ? (
-          <div className="text-center text-gray-400">Loading blog posts...</div>
-        ) : blogs.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogs.map((blog: BlogPost) => (
-              <BlogCard key={blog.postUrl} blog={blog} />
-            ))}
-          </div>
-        ) : (
-          <div className="text-center text-gray-400">
-            No blog posts available
-          </div>
-        )}
       </SectionWrapper>
 
       {/* Contact Section */}
