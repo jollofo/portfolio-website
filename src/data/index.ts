@@ -24,7 +24,7 @@ export const education = [
   {
     title: "Simon Business School",
     date: "2025-2026",
-    paragraph: "I am currently pursuing a Master of Science in AI in Business at the Simon Business School. The program focuses on data analysis, statistical modeling, and artificial intelligence to equip students with the skills needed to make data-driven decisions in a business context.",
+    paragraph: "I am currently pursuing a MS in AI in Business at the Simon Business School. The program focuses on data analysis, statistical modeling, and artificial intelligence to equip students with the skills needed to make data-driven decisions in a business context.",
   },
   {
     title: "University of Rochester",
@@ -43,9 +43,15 @@ export const education = [
 export const work = [
   {
     title: "Simon Vision Consulting - Simon Business School",
-    date: "May 2025 - Present",
+    date: "May 2025 - Dec 2025",
     paragraph:
       "Simon Vision Consulting is the student-run consulting organization at the Simon Business School. As a consultant, I work with a local company to provide data-driven solutions to real-world business problems for our clients. We utilize various analytical tools and techniques to deliver actionable insights that drive business growth and efficiency.",
+  },
+  {
+    title: "Intern - SEO Holdings",
+    date: "Jun 2025 - Sep 2025",
+    paragraph:
+      "Reduced manual SEO research and blog update workflows by automating keyword optimization and content publishing processes using Make and N8N, saving approximately 17 hours per week in operational overhead. ",
   },
   {
     title: "Lead Developer - Kuba AI",
@@ -80,7 +86,7 @@ export const work = [
   {
     title: "Tech Developer Intern - SEO Career",
     date: "Jun 2022 - May 2023",
-    paragraph: 
+    paragraph:
       "SEO Tech Developer is a remote tech training course that I had the opportunity to participate in. I immersed myself in a comprehensive prep program, accruing over 300 hours of training and creating web applications that leverage a broad range of technologies. ",
   },
   {
@@ -128,10 +134,12 @@ export const technologies = [
     title: "Go",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg",
   },
-  {title: "SQL",
+  {
+    title: "SQL",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
   },
-  {title: "R",
+  {
+    title: "R",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg"
   },
   {
@@ -155,13 +163,10 @@ export const technologies = [
     src: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
   },
   {
-    title: "MongoDB",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-  },
-  {
     title: "PostgreSQL",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-  }
+  },
+
 ];
 
 export const headerRightContent = {
@@ -228,7 +233,7 @@ export const projects: SliderProps[] = [
         },
         {
           src: d2,
-          type: "image", 
+          type: "image",
         },
         {
           src: d3,
