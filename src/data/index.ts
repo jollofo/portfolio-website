@@ -18,13 +18,12 @@ import g4 from "../../public/images/golazo_4.png";
 import d1 from "../../public/images/dia-1.png";
 import d2 from "../../public/images/dia-2.png";
 import d3 from "../../public/images/dia-3.png";
-import { title } from "process";
 
 export const education = [
   {
     title: "Simon Business School",
-    date: "2025-2026",
-    paragraph: "I am currently pursuing a MS in AI in Business at the Simon Business School. The program focuses on data analysis, statistical modeling, and artificial intelligence to equip students with the skills needed to make data-driven decisions in a business context.",
+    date: "2025 - Dec 2026 (expected)",
+    paragraph: "I am pursuing an MS in AI in Business at Simon Business School, with completion expected in December 2026. My studies focus on data analysis, statistical modeling, and applying AI to business decisions.",
   },
   {
     title: "University of Rochester",
@@ -45,7 +44,7 @@ export const work = [
     title: "Simon Vision Consulting - Simon Business School",
     date: "May 2025 - Dec 2025",
     paragraph:
-      "Simon Vision Consulting is the student-run consulting organization at the Simon Business School. As a consultant, I work with a local company to provide data-driven solutions to real-world business problems for our clients. We utilize various analytical tools and techniques to deliver actionable insights that drive business growth and efficiency.",
+      "As a consultant with Simon Vision Consulting, the student-run organization at Simon Business School, I worked with a local company to analyze business problems and develop recommendations grounded in data.",
   },
   {
     title: "Intern - SEO Holdings",
@@ -196,9 +195,9 @@ export const projects: SliderProps[] = [
           type: "image",
         },
       ],
-      left: '<p><strong>Tech Stack:</strong></br>Python</br><strong>Libraries:</strong><br>OpenCV, MediaPipe, Numpy, CVZone</p><strong>Other:</strong><br>Google\'s Teachable Machine<br/></br><span><a href="https://github.com/jollofo/asl-reader" target="_blank" rel="noopener noreferrer">GITHUB LINK</a></span>',
+      left: '<p><strong>Tech Stack:</strong></br>Python</br><strong>Libraries:</strong><br>OpenCV, MediaPipe, Numpy, CVZone</p><strong>Other:</strong><br>Google\'s Teachable Machine<br/></br><span><a href="https://github.com/jollofo/asl-reader" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>',
       right:
-        "<p>This project recognizes which letters, from the ASL alphabet, are being displayed on the video stream. It contains 1 folder and 2 files. The folder stores images that can be generated from the <strong>HandSignData.py</strong> file. It crops your hand out from a live video stream and saves images upon clicking the 's' key. This data is then used to power the <strong>HandSignTester.py</strong> file which recognizes which signs are being displayed by your hands and displays the result on the video stream. I used Google's Teachable Machine to train the model.</p>",
+        "<p>A live camera tool that recognizes letters from the American Sign Language alphabet and displays the prediction on screen. I built the hand-tracking and image-capture workflow with Python and OpenCV, then trained the recognition model using Google's Teachable Machine.</p>",
     },
   },
   {
@@ -218,9 +217,9 @@ export const projects: SliderProps[] = [
           type: "image",
         },
       ],
-      left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, Pickle, Numpy</p><strong>Other:</strong><br/>Firebase<br/><br/><span><a href="https://github.com/jollofo/face-detector" target="_blank" rel="noopener noreferrer">GITHUB LINK</a></span>',
+      left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, Pickle, Numpy</p><strong>Other:</strong><br/>Firebase<br/><br/><span><a href="https://github.com/jollofo/face-detector" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>',
       right:
-        "<p>This project uses a live video stream to recognize your face and match it to the information in the database. If your data is in the database, it records your attendance. It contains 3 files: <strong>databaseManager.py</strong> holds the data that the program checks against and handles some of the firebase certificates. <strong>encoder.py</strong> encodes the image data in order to store it more efficiently. Lastly, <strong>main.py</strong> brings everything together. It contains the face tracking code and does the matching of information. If a match is found it upadtes the necessary information.</p>",
+        "<p>An attendance tracker that matches faces from a live camera feed with registered profiles and records attendance in Firebase. I built the image-encoding, face-matching, and database-update workflow in Python.</p>",
     },
   },
   {
@@ -240,9 +239,9 @@ export const projects: SliderProps[] = [
           type: "image",
         },
       ],
-      left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>PyQt6, OpenCV, Tesseract OCR, PyAudio, SpeechRecognition</p><br /><span><a href="https://github.com/jollofo/dia-assistant" target="_blank" rel="noopener noreferrer">GITHUB LINK</a></span>',
+      left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>PyQt6, OpenCV, Tesseract OCR, PyAudio, SpeechRecognition</p><br /><span><a href="https://github.com/jollofo/dia-assistant" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>',
       right:
-        "<p>A multi-threaded PyQt6 application orchestrating real-time screen analysis, LLM integration, and UI overlay via signal/slot architecture. Implemented a hybrid screen-scanning pipeline combining perceptual hashing, OpenCV UI-element detection, and fallback analysis using LLaVA + Tesseract OCR for structured visual context. Built a streaming LLM orchestrator using locally hosted models with context aggregation from visual analysis; designed audio STT pipeline using PyAudio + SpeechRecognition.</p>",
+        "<p>A desktop assistant that uses screen context and voice input to support interactions with locally hosted AI models. I built a PyQt6 interface with screen analysis, text recognition, speech-to-text, and streaming model responses.</p>",
     },
   },
   {
@@ -266,9 +265,9 @@ export const projects: SliderProps[] = [
           type: "image",
         },
       ],
-      left: '<p><strong>Tech Stack:</strong> </br>TypeScript, SQL</br><strong>Libraries:</strong><br>Motion</p><strong>Other:</strong><br/>PostgreSQL<br/><br/><span><a href="https://github.com/jollofo/golazo" target="_blank" rel="noopener noreferrer">GITHUB LINK</a></span>',
+      left: '<p><strong>Tech Stack:</strong> </br>TypeScript, SQL</br><strong>Libraries:</strong><br>Motion</p><strong>Other:</strong><br/>PostgreSQL<br/><br/><span><a href="https://github.com/jollofo/golazo" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>',
       right:
-        "<p>Golazo is a web application that aims to streamline and manage FIFA players, tournaments and rankings for FIFA enthusiasts across Rochester. With <strong/>50+ active users</strong> spread across the University of Rochester, Monroe Community College and Rochester Institute of Technology, Golazo strives to be an evolving hub for FIFA players.</p>",
+        "<p>A TypeScript web app for organizing FIFA players, tournaments, and rankings. Golazo serves <strong>50+ active users</strong> across the University of Rochester, Monroe Community College, and Rochester Institute of Technology, with player and tournament data stored in PostgreSQL.</p>",
     },
   },
   {
@@ -288,9 +287,9 @@ export const projects: SliderProps[] = [
           type: "image",
         },
       ],
-      left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, MediaPipe, Numpy, ComTypes</p><br /><span><a href="https://github.com/jollofo/gesture-volume-control" target="_blank" rel="noopener noreferrer">GITHUB LINK</a></span>',
+      left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, MediaPipe, Numpy, ComTypes</p><br /><span><a href="https://github.com/jollofo/gesture-volume-control" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>',
       right:
-        "<p>This project allows you to control your volume from a live video stream using your finger and thumb. It contains two files: The first, <strong>HandTrackingMod.py</strong>, implements a program that tracks your hands on a live video stream using the MediaPipe and CVZone libraries. This program is used in the <strong>VolumeHandControl.py</strong> file, which does the bulk of the work. It connects to your PC's volume controls and increases or decreases the volume according to the distance between your finger and thumb. This is done on a live video stream where your current volume is displayed alongside the distance between your finger and thumb.</p>",
+        "<p>A hands-free volume controller that tracks the distance between your thumb and finger through a live camera feed. I connected MediaPipe hand tracking to the computer's audio controls and added an on-screen display of the current volume.</p>",
     },
   },
   {
@@ -310,9 +309,9 @@ export const projects: SliderProps[] = [
           type: "image",
         },
       ],
-      left: '<p><strong>Tech Stack:</strong></br>React.js, C#<br/><strong>Libraries:</strong><br/>Tailwind.css<br/><strong>Other:</strong><br/>Firebase<br/><br/><span><a href="https://github.com/jollofo/Cache" target="_blank" rel="noopener noreferrer">GITHUB LINK</a></span>',
+      left: '<p><strong>Tech Stack:</strong></br>React.js, C#<br/><strong>Libraries:</strong><br/>Tailwind.css<br/><strong>Other:</strong><br/>Firebase<br/><br/><span><a href="https://github.com/jollofo/Cache" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>',
       right:
-        "<p>Cache is a an online image hosting and sharing platform intended to give people the ability to upload pictures and share them easily. It works by allowing users to create a room and upload images to it. Each room has a unique key that they can then share with people who will be able to access the room. Each room exists temporarily and can be deleted by a user or is deleted automatically after the allocated time. The images are stored in a <strong>Firbase</strong> storage bucket. The front end is built using <strong>React.js</strong> and <strong>Tailwind.css</strong> while the back end is built in <strong>C#</strong>.</p>",
+        "<p>A temporary image-sharing app built with React, Tailwind CSS, and C#. Users create a room, upload photos, and share its unique key. Firebase stores the images, and rooms can be deleted manually or expire after a set time.</p>",
     },
   },
 ];

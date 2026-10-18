@@ -1,13 +1,13 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { motion, useReducedMotion } from 'framer-motion';
 
 const Hero = () => {
+  const reduceMotion = useReducedMotion();
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
     }
   };
 
@@ -24,15 +24,15 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-serif mb-6 text-white">
             Hi, I&apos;m James
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            A Master&apos;s student in AI in Business with a passion for building innovative
-            software and systems.
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+            I build web apps and automations that turn everyday problems into useful tools.
+            My work connects React, TypeScript, and AI with the people using them.
           </p>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="flex justify-center space-x-6"
+            className="flex flex-wrap justify-center gap-x-6 gap-y-3"
           >
             <a
               href="#projects"

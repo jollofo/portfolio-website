@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { useScrollDirection } from '@/hooks/useScrollDirection';
 
 interface DockItem {
@@ -65,22 +65,29 @@ const dockItems: DockItem[] = [
 
 const Dock: React.FC = () => {
   const { isVisible } = useScrollDirection();
+  const [hasFocus, setHasFocus] = useState(false);
+  const reduceMotion = useReducedMotion();
 
   const handleNavigation = (href: string) => {
     if (href === '#') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
     } else {
       const element = document.querySelector(href);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
       }
     }
   };
 
   return (
     <AnimatePresence>
-      {isVisible && (
-        <motion.div
+      {(isVisible || hasFocus) && (
+        <motion.nav
+          aria-label="Main navigation"
+          onFocusCapture={() => setHasFocus(true)}
+          onBlurCapture={(event) => {
+            if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setHasFocus(false);
+          }}
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
@@ -89,14 +96,14 @@ const Dock: React.FC = () => {
             stiffness: 300,
             damping: 30,
           }}
-          className="fixed bottom-4 left-0 right-0 z-50 flex justify-center px-4"
+          className="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] left-0 right-0 z-50 flex justify-center px-3"
         >
-          <div className="flex items-center gap-1 px-3 py-2 bg-black/90 backdrop-blur-md border border-gray-800/50 rounded-2xl shadow-2xl">
-            {dockItems.map((item, index) => (
+          <div className="grid grid-cols-5 w-full max-w-sm items-center gap-1 px-2 py-2 bg-black/90 backdrop-blur-md border border-gray-800/50 rounded-2xl shadow-2xl">
+            {dockItems.map((item) => (
               <motion.button
                 key={item.id}
                 onClick={() => handleNavigation(item.href)}
-                className="relative flex flex-col items-center justify-center p-2 text-gray-400 hover:text-white transition-colors duration-200 group min-w-[60px]"
+                className="relative flex flex-col items-center justify-center px-1 py-2 text-gray-400 hover:text-white transition-colors duration-200 group min-w-0 min-h-12 rounded-xl"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{
@@ -115,14 +122,14 @@ const Dock: React.FC = () => {
                   <div className="mb-1">
                     {item.icon}
                   </div>
-                  <span className="text-[10px] font-medium text-center leading-tight group-hover:text-blue-400 transition-colors duration-200">
+                  <span className="text-[10px] sm:text-xs font-medium text-center leading-tight group-hover:text-blue-400 transition-colors duration-200">
                     {item.label}
                   </span>
                 </div>
               </motion.button>
             ))}
           </div>
-        </motion.div>
+        </motion.nav>
       )}
     </AnimatePresence>
   );

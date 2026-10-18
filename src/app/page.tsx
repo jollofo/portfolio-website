@@ -1,12 +1,11 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Dock from "@/components/Dock";
 import Hero from "@/components/Hero";
 import GridList from "@/components/GridList";
 import Slider from "@/components/Slider";
 import { education, work, technologies, projects } from "@/data";
-import { motion } from "framer-motion";
-import Link from "next/link";
+import { motion, MotionConfig } from "framer-motion";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -46,6 +45,7 @@ const SectionWrapper = ({
 
 export default function Home() {
   return (
+    <MotionConfig reducedMotion="user">
     <main className="min-h-screen bg-black">
       <Dock />
       <Hero />
@@ -207,5 +207,6 @@ export default function Home() {
         </div>
       </section>
     </main>
+    </MotionConfig>
   );
 }
