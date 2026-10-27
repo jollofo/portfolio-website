@@ -18,6 +18,9 @@ import g4 from "../../public/images/golazo_4.png";
 import d1 from "../../public/images/dia-1.png";
 import d2 from "../../public/images/dia-2.png";
 import d3 from "../../public/images/dia-3.png";
+import q1 from "../../public/images/quote-intake-1.png";
+import q2 from "../../public/images/quote-intake-2.png";
+import q3 from "../../public/images/quote-intake-3.png";
 
 export const education = [
   {
@@ -178,6 +181,28 @@ export const headerRightContent = {
 };
 
 export const projects: SliderProps[] = [
+  {
+    title: "Quote-Intake Agent",
+    data: {
+      media: [
+        {
+          src: q1,
+          type: "image",
+        },
+        {
+          src: q2,
+          type: "image",
+        },
+        {
+          src: q3,
+          type: "image",
+        },
+      ],
+      left: '<p><strong>Tech Stack:</strong></br>TypeScript, Node.js</br><strong>Libraries:</strong><br>Anthropic SDK, Zod</p><strong>Other:</strong><br/>Claude Opus 5.5, structured outputs<br/><br/><span><a href="https://github.com/jollofo/quote-intake-agent" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>',
+      right:
+        "<p>An AI intake agent for a home-services contractor that routes inbound quote requests and drafts replies for a dispatcher to approve. Claude reads the message and drafts the reply, while code owns pricing, routing, required information and hazard overrides, and sends anything uncertain to a person. I measured it with a labelled eval suite, a blind held-out set and fault injection: <strong>20/20 routes and 4/4 safety escalations on held-out</strong>, and <strong>232/232 injected model mistakes kept from the customer</strong>.</p>",
+    },
+  },
   {
     title: "American Sign Language Reader",
     data: {
