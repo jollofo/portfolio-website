@@ -4,7 +4,8 @@ import Dock from "@/components/Dock";
 import Hero from "@/components/Hero";
 import GridList from "@/components/GridList";
 import Slider from "@/components/Slider";
-import { education, work, technologies, projects } from "@/data";
+import Image from "next/image";
+import { education, work, technologies, projects, earlierProjects } from "@/data";
 import { motion, MotionConfig } from "framer-motion";
 
 const sectionVariants = {
@@ -152,6 +153,38 @@ export default function Home() {
             >
               <Slider title={project.title} data={project.data} />
             </motion.div>
+          ))}
+        </div>
+
+        <h3 className="text-3xl font-serif mt-32 mb-8 text-white">
+          Earlier work
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          {earlierProjects.map((project) => (
+            <article key={project.title} className="rounded-lg border border-gray-800 overflow-hidden">
+              <div className="relative aspect-video bg-gray-900">
+                <Image
+                  src={project.image}
+                  alt={`${project.title} screenshot`}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 640px) calc(100vw - 32px), 500px"
+                />
+              </div>
+              <div className="p-5">
+                <h4 className="text-xl font-serif text-white mb-2">{project.title}</h4>
+                <p className="text-gray-300 mb-2">{project.description}</p>
+                <p className="text-sm text-gray-400 mb-3">{project.stack}</p>
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white underline underline-offset-4 hover:text-blue-400 transition-colors"
+                >
+                  View on GitHub
+                </a>
+              </div>
+            </article>
           ))}
         </div>
       </SectionWrapper>

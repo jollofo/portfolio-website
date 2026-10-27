@@ -1,16 +1,8 @@
 import { SliderProps } from "@/components/Slider";
-import asl1 from "../../public/images/asl-alphabet.jpg";
 import asl2 from "../../public/images/asl-reader-1.png";
-import asl3 from "../../public/images/asl-reader-2.png";
 import hvc1 from "../../public/images/gesture-volume-control-1.png";
-import hvc2 from "../../public/images/gesture-volume-control-2.png";
-import hvc3 from "../../public/images/gesture-volume-control-3.png";
 import f1 from "../../public/images/face-1.png";
-import f2 from "../../public/images/face-2.png";
-import f3 from "../../public/images/face-3.png";
 import c1 from "../../public/images/cache-1.png";
-import c2 from "../../public/images/cache-2.png";
-import c3 from "../../public/images/cache-3.png";
 import g1 from "../../public/images/golazo_1.png";
 import g2 from "../../public/images/golazo_2.png";
 import g3 from "../../public/images/golazo_3.png";
@@ -21,6 +13,9 @@ import d3 from "../../public/images/dia-3.png";
 import q1 from "../../public/images/quote-intake-1.png";
 import q2 from "../../public/images/quote-intake-2.png";
 import q3 from "../../public/images/quote-intake-3.png";
+import rmd1 from "../../public/images/ratemydegrees-1.png";
+import rmd2 from "../../public/images/ratemydegrees-2.png";
+import rmd3 from "../../public/images/ratemydegrees-3.png";
 
 export const education = [
   {
@@ -34,68 +29,56 @@ export const education = [
     paragraph:
       "I graduated with a BA in Computer Science with a minor in Psychology. I focused on Computer Vision, Machine Learning, and Human-Computer Interaction courses while also exploring various interdisciplinary subjects through my psychology minor.",
   },
-  {
-    title: "African Leadership Academy",
-    date: "2018-2020",
-    paragraph:
-      "ALA is an A-levels program based in South Africa that focuses on developing the next generation of leaders. I had the privilege to attend the program where I finished with two AS-levels in English and Computer Science and 2 A-levels in Economics and Math.",
-  },
 ];
 
 export const work = [
   {
-    title: "Simon Vision Consulting - Simon Business School",
-    date: "May 2025 - Dec 2025",
+    title: "Sales Development Representative - Quinn",
+    date: "Aug 2026 - Present",
     paragraph:
-      "As a consultant with Simon Vision Consulting, the student-run organization at Simon Business School, I worked with a local company to analyze business problems and develop recommendations grounded in data.",
+      "Quinn helps frontline teams standardize how they train and perform. I prospect and qualify home-services and logistics companies, research accounts, and run multichannel outreach. I also build automations that take repetitive follow-up work off the sales team.",
+  },
+  {
+    title: "Lead Software Engineer - Kuba AI",
+    date: "Mar 2025 - Aug 2026",
+    paragraph:
+      "Kuba AI is a B2B SaaS platform where companies create AI-powered QA personas that test their apps and websites like real users. I built the React and TypeScript UI and integrated Midscene.js to simulate realistic user behavior, storing session reports in AWS S3 and serving them through CloudFront. I also containerized the platform with Docker and began building in-house models on AWS SageMaker and Bedrock to make personas more realistic and reduce reliance on third-party APIs.",
   },
   {
     title: "Intern - SEO Holdings",
     date: "Jun 2025 - Sep 2025",
     paragraph:
-      "Reduced manual SEO research and blog update workflows by automating keyword optimization and content publishing processes using Make and N8N, saving approximately 17 hours per week in operational overhead. ",
+      "I automated keyword research, optimization, and blog publishing with n8n and Make, saving about 17 hours per week of manual SEO work. I also built lead enrichment and routing that joins web analytics and marketing data, processing about 20 SQLs a day, plus AI-assisted lead scoring on Google Vertex AI and local LLMs.",
   },
   {
-    title: "Lead Developer - Kuba AI",
-    date: "Mar 2025 - Present",
+    title: "Data Analyst - Simon Vision Consulting",
+    date: "Aug 2025 - Dec 2025",
     paragraph:
-      "Kuba AI is an innovative startup focused on developing AI-powered solutions to enhance productivity and streamline workflows. As the Lead Developer, I oversee the technical development of our products, manage a team of developers, and ensure that our solutions meet the highest standards of quality and performance.",
+      "With Simon Vision Consulting, the student-run consultancy at Simon Business School, I led launch and adoption planning for a restaurant chain's new ordering app across 40+ locations. A/B tests on the app UI raised click-through by 68%, and cohort analysis in Python led to recommendations that lifted repeat visits 32% over three months.",
+  },
+  {
+    title: "IT Consultant (Team Lead) - Simon Business School",
+    date: "May 2021 - May 2025",
+    paragraph:
+      "I built a Python tool on the Zoom API that audits account settings for 60+ online classes, saving student staff about 10 hours per week, and automated adding and removing 500+ students across Slack workspaces with the Slack API. I resolved software, network, and hardware issues for faculty and staff at a 90% resolution rate and moved 30+ professors onto virtual teaching.",
+  },
+  {
+    title: "Software Developer, University IT - University of Rochester",
+    date: "Oct 2022 - May 2025",
+    paragraph:
+      "I shipped React, Node, and Express updates to LASSO, the IT department's scheduling, shift-report, and equipment-lending app, cutting user-reported issues by about 50%. I integrated Google Sign-In and Calendar APIs so staff could sync shifts, reducing scheduling conflicts by 26%.",
   },
   {
     title: "HCI Research Assistant - University of Rochester",
     date: "Sep 2024 - May 2025",
     paragraph:
-      "As a Human-Computer Interaction Research Assistant, I was involved in exploring the design and use of computer technology, focusing particularly on the interfaces between people (users) and computers. My work included conducting user studies, analyzing data, and contributing to the development of user-centered design solutions.",
-  },
-  {
-    title: "Online Instructor - iD Tech",
-    date: "Dec 2023 - May 2024",
-    paragraph:
-      "At iD Tech, I provided dynamic and interactive online learning experience in Python, JavaScript, and C++ for both groups and individuals. My focus was on customizing each curriculum to fit each student's aspirations while ensuring smooth virtual classes.",
+      "I rebuilt an ASL word-recommendation research system (Stanza, BERT) as a portable Flask and Docker app on AWS, enabling remote user studies. This cut data collection by a week per participant and doubled participation.",
   },
   {
     title: "Intern - Acting Globally",
     date: "Sep 2023 - Aug 2024",
     paragraph:
       "Acting Globally works to connect volunteers with grassroots groups around the world. I collaborated with a team of four developers to create innovative tools for these volunteers and grassroots organizations including dynamic signup sheets and project dashboards. I also aided in building the front-end using React.js and Next.js and engineering a back-end system using MongoDB and Node.js that optimized data maintenance and retrieval processes"
-  },
-  {
-    title: "Web Developer - University of Rochester",
-    date: "Oct 2022 - Aug 2023",
-    paragraph:
-      "As a Web Developer, I mainly update our University IT's logistics web application. I've spearheaded the integration of Google APIs, to help streamline schedule management for the university community. ",
-  },
-  {
-    title: "Tech Developer Intern - SEO Career",
-    date: "Jun 2022 - May 2023",
-    paragraph:
-      "SEO Tech Developer is a remote tech training course that I had the opportunity to participate in. I immersed myself in a comprehensive prep program, accruing over 300 hours of training and creating web applications that leverage a broad range of technologies. ",
-  },
-  {
-    title: "IT Consultant (Team Lead) - Simon Business School",
-    date: "May 2021 - May 2025",
-    paragraph:
-      "At the Simon Business School, I have helped resolve various software installation issues, network connectivity problems, and hardware complications. I engineered a Python program to automatically verify Zoom account settings and developed a script to automate the adding and removing of 500+ students from various Slack spaces using Slack's API.",
   },
 ];
 
@@ -198,53 +181,40 @@ export const projects: SliderProps[] = [
           type: "image",
         },
       ],
-      left: '<p><strong>Tech Stack:</strong></br>TypeScript, Node.js</br><strong>Libraries:</strong><br>Anthropic SDK, Zod</p><strong>Other:</strong><br/>Claude Opus 5.5, structured outputs<br/><br/><span><a href="https://github.com/jollofo/quote-intake-agent" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>',
+      left: '<p><strong>Tech Stack:</strong></br>TypeScript, Node.js</br><strong>Libraries:</strong><br>Anthropic SDK, Zod</p><strong>Other:</strong><br/>Claude Opus 5.5, structured outputs<br/><br/><span><a href="https://github.com/jollofo/quote-intake-agent" target="_blank" rel="noopener noreferrer">View on GitHub</a> · <a href="/projects/quote-intake">Read the case study</a></span>',
       right:
         "<p>An AI intake agent for a home-services contractor that routes inbound quote requests and drafts replies for a dispatcher to approve. Claude reads the message and drafts the reply, while code owns pricing, routing, required information and hazard overrides, and sends anything uncertain to a person. I measured it with a labelled eval suite, a blind held-out set and fault injection: <strong>20/20 routes and 4/4 safety escalations on held-out</strong>, and <strong>232/232 injected model mistakes kept from the customer</strong>.</p>",
     },
   },
   {
-    title: "American Sign Language Reader",
+    title: "Fieldwork CRM",
     data: {
-      media: [
-        {
-          src: asl1,
-          type: "image",
-        },
-        {
-          src: asl2,
-          type: "image",
-        },
-        {
-          src: asl3,
-          type: "image",
-        },
-      ],
-      left: '<p><strong>Tech Stack:</strong></br>Python</br><strong>Libraries:</strong><br>OpenCV, MediaPipe, Numpy, CVZone</p><strong>Other:</strong><br>Google\'s Teachable Machine<br/></br><span><a href="https://github.com/jollofo/asl-reader" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>',
+      media: [],
+      left: '<p><strong>Tech Stack:</strong></br>TypeScript, Next.js, Node.js</br><strong>Data:</strong><br>Node built-in SQLite</p><strong>Other:</strong><br/>Gmail API (OAuth), MCP, Crustdata API',
       right:
-        "<p>A live camera tool that recognizes letters from the American Sign Language alphabet and displays the prediction on screen. I built the hand-tracking and image-capture workflow with Python and OpenCV, then trained the recognition model using Google's Teachable Machine.</p>",
+        "<p>A prospecting workbench with Gmail OAuth sync and human-reviewed sending: nothing goes out until I approve the exact email and attachments. It includes an MCP server that lets a coding agent research leads and draft outreach against CRM records, and a Crustdata pipeline that reserves each request's maximum charge and stops at a hard spend cap. Its last run screened <strong>165 job postings and 94 companies for $2.79</strong>.</p>",
     },
   },
   {
-    title: "Face Detector - Attendance Tracker",
+    title: "RateMyDegrees",
     data: {
       media: [
         {
-          src: f1,
+          src: rmd1,
           type: "image",
         },
         {
-          src: f2,
+          src: rmd2,
           type: "image",
         },
         {
-          src: f3,
+          src: rmd3,
           type: "image",
         },
       ],
-      left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, Pickle, Numpy</p><strong>Other:</strong><br/>Firebase<br/><br/><span><a href="https://github.com/jollofo/face-detector" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>',
+      left: '<p><strong>Tech Stack:</strong></br>TypeScript, Next.js</br><strong>Libraries:</strong><br>Prisma, Supabase Auth</p><strong>Other:</strong><br/>PostgreSQL, Typesense, Sentry, PostHog<br/><br/><span><a href="https://ratemydegrees.com" target="_blank" rel="noopener noreferrer">Visit the live site</a> · <a href="https://github.com/jollofo/ratemydegrees" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>',
       right:
-        "<p>An attendance tracker that matches faces from a live camera feed with registered profiles and records attendance in Firebase. I built the image-encoding, face-matching, and database-update workflow in Python.</p>",
+        "<p>A live site where students and graduates review their degree programs, covering 460 degrees. Sign-in uses Supabase email codes or Google, school search falls back to Typesense aliases, and automated checks flag reviews that contain contact details or links for moderation. Analytics load only after a visitor opts in.</p>",
     },
   },
   {
@@ -295,48 +265,35 @@ export const projects: SliderProps[] = [
         "<p>A TypeScript web app for organizing FIFA players, tournaments, and rankings. Golazo serves <strong>50+ active users</strong> across the University of Rochester, Monroe Community College, and Rochester Institute of Technology, with player and tournament data stored in PostgreSQL.</p>",
     },
   },
+];
+
+export const earlierProjects = [
+  {
+    title: "American Sign Language Reader",
+    description: "Recognizes ASL alphabet letters from a live camera feed.",
+    stack: "Python, OpenCV, MediaPipe, Teachable Machine",
+    github: "https://github.com/jollofo/asl-reader",
+    image: asl2,
+  },
+  {
+    title: "Face Detector - Attendance Tracker",
+    description: "Matches faces from a live camera against registered profiles and records attendance in Firebase.",
+    stack: "Python, OpenCV, Firebase",
+    github: "https://github.com/jollofo/face-detector",
+    image: f1,
+  },
   {
     title: "Hand Volume Control",
-    data: {
-      media: [
-        {
-          src: hvc1,
-          type: "image",
-        },
-        {
-          src: hvc2,
-          type: "image",
-        },
-        {
-          src: hvc3,
-          type: "image",
-        },
-      ],
-      left: '<p><strong>Tech Stack:</strong> </br>Python</br><strong>Libraries:</strong><br>OpenCV, MediaPipe, Numpy, ComTypes</p><br /><span><a href="https://github.com/jollofo/gesture-volume-control" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>',
-      right:
-        "<p>A hands-free volume controller that tracks the distance between your thumb and finger through a live camera feed. I connected MediaPipe hand tracking to the computer's audio controls and added an on-screen display of the current volume.</p>",
-    },
+    description: "Sets the computer's volume from the distance between your thumb and finger.",
+    stack: "Python, OpenCV, MediaPipe",
+    github: "https://github.com/jollofo/gesture-volume-control",
+    image: hvc1,
   },
   {
     title: "Cache",
-    data: {
-      media: [
-        {
-          src: c1,
-          type: "image",
-        },
-        {
-          src: c3,
-          type: "image",
-        },
-        {
-          src: c2,
-          type: "image",
-        },
-      ],
-      left: '<p><strong>Tech Stack:</strong></br>React.js, C#<br/><strong>Libraries:</strong><br/>Tailwind.css<br/><strong>Other:</strong><br/>Firebase<br/><br/><span><a href="https://github.com/jollofo/Cache" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>',
-      right:
-        "<p>A temporary image-sharing app built with React, Tailwind CSS, and C#. Users create a room, upload photos, and share its unique key. Firebase stores the images, and rooms can be deleted manually or expire after a set time.</p>",
-    },
+    description: "Temporary photo-sharing rooms that expire after a set time.",
+    stack: "React, C#, Tailwind CSS, Firebase",
+    github: "https://github.com/jollofo/Cache",
+    image: c1,
   },
 ];

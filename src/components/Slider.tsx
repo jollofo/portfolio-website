@@ -25,6 +25,7 @@ const Slider: React.FC<SliderProps> = ({ title, data }) => {
   return (
     <div className="w-full max-w-6xl mx-auto">
       <h3 className="text-3xl font-serif mb-8 text-white">{title}</h3>
+      {data.media.length > 0 && (
       <div
         role="region"
         aria-roledescription="carousel"
@@ -101,8 +102,9 @@ const Slider: React.FC<SliderProps> = ({ title, data }) => {
           Image {activeSlide + 1} of {data.media.length} for {title}
         </p>
       </div>
+      )}
 
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className={`${data.media.length > 0 ? "mt-12" : ""} grid grid-cols-1 md:grid-cols-2 gap-8`}>
         <div className="prose prose-sm prose-invert max-w-none text-gray-300 text-left" dangerouslySetInnerHTML={{ __html: data.left }} />
         <div className="prose prose-sm prose-invert max-w-none text-gray-300 text-left" dangerouslySetInnerHTML={{ __html: data.right }} />
       </div>

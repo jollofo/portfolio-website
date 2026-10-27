@@ -21,12 +21,17 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto text-center"
         >
+          <p className="text-sm md:text-base uppercase tracking-widest text-gray-400 mb-4">
+            Forward-deployed / applied AI engineer · New York, NY
+          </p>
           <h1 className="text-5xl md:text-7xl font-serif mb-6 text-white">
             Hi, I&apos;m James
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-            I build web apps and automations that turn everyday problems into useful tools.
-            My work connects React, TypeScript, and AI with the people using them.
+          <p className="text-xl md:text-2xl text-gray-300 mb-4 leading-relaxed">
+            I build the agents, integrations, and automations that take hours of manual work off a team.
+          </p>
+          <p className="text-base md:text-lg text-gray-400 mb-8">
+            MS in AI in Business, Simon Business School (Dec 2026)
           </p>
           <motion.div
             initial={{ opacity: 0 }}
@@ -47,6 +52,40 @@ const Hero = () => {
               className="text-lg text-white hover:text-blue-400 transition-colors"
             >
               Get in Touch
+            </a>
+            <a
+              href="/James-Muguiyi-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-lg text-white hover:text-blue-400 transition-colors"
+            >
+              Résumé
+            </a>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+            className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-3 text-gray-400"
+          >
+            <a href="mailto:jmuguiyijr@gmail.com" className="text-gray-400 hover:text-blue-400 transition-colors">
+              jmuguiyijr@gmail.com
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jamesmuguiyi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-blue-400 transition-colors"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://www.github.com/jollofo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-blue-400 transition-colors"
+            >
+              GitHub
             </a>
           </motion.div>
         </motion.div>
