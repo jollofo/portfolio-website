@@ -36,7 +36,7 @@ export const work = [
     title: "Sales Development Representative - Quinn",
     date: "Aug 2026 - Present",
     paragraph:
-      "Quinn helps frontline teams standardize how they train and perform. I prospect and qualify home-services and logistics companies, research accounts, and run multichannel outreach. I also build automations that take repetitive follow-up work off the sales team.",
+      "Quinn helps frontline teams standardize how they train and perform. I prospect and qualify home-services and logistics companies, research accounts, and run multichannel outreach.",
   },
   {
     title: "Lead Software Engineer - Kuba AI",
